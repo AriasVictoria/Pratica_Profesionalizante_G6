@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibloteca;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,14 +14,19 @@ namespace LogicaClase
     {
         List<Producto> ListaProducto = new List<Producto>();
         List<Proveedor> ListaProveedor = new List<Proveedor>();
-        List<Vendedor> ListaVendedor = new List<Vendedor>();
+        List<Usuario> ListaUsuario = new List<Usuario>();
         List<Carrito> ListaCarrito = new List<Carrito>();
-        public void altavendedor(string nombre, string contraseña) //parametros
+        List<Vendedor> ListaVendedor = new List<Vendedor>();
+        List<Dueño> Listadueño = new List<Dueño>();
+        public void altausuario(string nombre, string apellido, string contraseña, string tipo) //parametros
         {
-            Vendedor vendedornuevo = new Vendedor();
-            vendedornuevo.nombre = nombre;
-            vendedornuevo.contraseña = contraseña;
-            ListaVendedor.Add(vendedornuevo);
+            Usuario usuarionuevo = new Usuario();
+            usuarionuevo.nombre = nombre;
+            usuarionuevo.apellido = apellido;
+            usuarionuevo.contraseña = contraseña;
+            usuarionuevo.tipo = tipo;
+            ListaUsuario.Add(usuarionuevo);
+
         }
 
         public void altaproducto(int id, string codigo_barra, int precio, string nombrep, int stock) //parametros

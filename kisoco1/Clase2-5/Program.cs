@@ -15,16 +15,21 @@ namespace Proyecto
 
             while ()
             {
-                Vendedor Vendedoragregado = new Vendedor();
-                Console.WriteLine("agregar un persona");
+                Usuario usuarioagregado = new Usuario();
+                Console.WriteLine("agregar el tipo de usuario");
+                usuarioagregado.tipo = Console.ReadLine();
 
                 Console.WriteLine("arranca por el nombre");
-                Vendedoragregado.nombre = Console.ReadLine();
+                usuarioagregado.nombre = Console.ReadLine();
+
+                Console.Write("agregame tu apellido");
+                usuarioagregado.apellido = Console.ReadLine();
 
                 Console.WriteLine("agregar la contraseña");
-                Vendedoragregado.contraseña = Console.ReadLine();
+                usuarioagregado.contraseña = Console.ReadLine();
 
-                principal.altavendedor(Vendedoragregado.nombre, Vendedoragregado.contraseña);
+                principal.altausuario(usuarioagregado.nombre, usuarioagregado.apellido, usuarioagregado.contraseña, 
+                    usuarioagregado.tipo);
             }
 
             while ()
@@ -65,7 +70,8 @@ namespace Proyecto
                 Console.WriteLine("agregar la lista de producto");
                 Proveedoragregado.lproductos = Console.ReadLine();
 
-                principal.altaproveedor(Proveedoragregado.apellido, Proveedoragregado.nombreproveedor, Proveedoragregado.lproductos);
+                principal.altaproveedor(Proveedoragregado.apellido, Proveedoragregado.nombreproveedor, 
+                    Proveedoragregado.lproductos);
             }
 
             while ()
@@ -79,7 +85,7 @@ namespace Proyecto
                 Console.WriteLine("este es el precio de tu producto");
                 Carritoagregado.precio_producto = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("este es el precio final");
+                Console.WriteLine("este es el monto final");
                 Carritoagregado.final = int.Parse(Console.ReadLine());
 
                 principal.altacarrito(Carritoagregado.final, Carritoagregado.precio_producto,Carritoagregado.tipo_producto);

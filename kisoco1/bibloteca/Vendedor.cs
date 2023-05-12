@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicaClase
+namespace bibloteca
 {
-    public class Vendedor
+    public class Vendedor 
     {
-        public string nombre{ get; set; }
-        public string contraseña { get; set; }
+        public int Id { get; set; }
+        public Vendedor usuariovendedor{ get; set; }
     }
 }
