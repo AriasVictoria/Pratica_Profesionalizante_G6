@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using bibloteca;
 using LogicaClase;
 
 namespace Proyecto
@@ -13,26 +14,28 @@ namespace Proyecto
         {
             Principal principal = new Principal();
 
-            while ()
             {
-                Usuario usuarioagregado = new Usuario();
-                Console.WriteLine("agregar el tipo de usuario");
-                usuarioagregado.tipo = Console.ReadLine();
+                Vendedor vendedoragregado = new Vendedor();
+                Console.WriteLine("agrega tu id ");
+                vendedoragregado.Id = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("arranca por el nombre");
-                usuarioagregado.nombre = Console.ReadLine();
+                vendedoragregado.Nombre_vendedor = Console.ReadLine();
 
-                Console.Write("agregame tu apellido");
-                usuarioagregado.apellido = Console.ReadLine();
-
-                Console.WriteLine("agregar la contraseña");
-                usuarioagregado.contraseña = Console.ReadLine();
-
-                principal.altausuario(usuarioagregado.nombre, usuarioagregado.apellido, usuarioagregado.contraseña, 
-                    usuarioagregado.tipo);
+                principal.altavendedor(vendedoragregado.Id, vendedoragregado.Nombre_vendedor);
             }
 
-            while ()
+            {
+                Dueño dueñoagregado = new Dueño();
+                Console.WriteLine("agrega tu id ");
+                dueñoagregado.id = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("arranca por el nombre");
+                dueñoagregado.nombre_dueño = Console.ReadLine();
+
+                principal.altavendedor(dueñoagregado.id, dueñoagregado.nombre_dueño);
+            }
+
             {
                 Producto Productoagregado = new Producto();
                 Console.WriteLine("agregar un producto");
@@ -56,7 +59,6 @@ namespace Proyecto
                     Productoagregado.precio, Productoagregado.codigo_barra, Productoagregado.stock);
             }
 
-            while ()
             {
                 Proveedor Proveedoragregado = new Proveedor();
                 Console.WriteLine("agregar un proveedor");
@@ -74,7 +76,6 @@ namespace Proyecto
                     Proveedoragregado.lproductos);
             }
 
-            while ()
             {
                 Carrito Carritoagregado = new Carrito();
                 Console.WriteLine("crea tu carrito");
