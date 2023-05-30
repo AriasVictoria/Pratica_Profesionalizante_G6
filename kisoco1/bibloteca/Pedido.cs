@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaClase
 {
-    public class Carrito : Producto
+    public class Pedido : Producto
     {
         public double final { get; set; } 
         public double precio_producto {get ; set;}

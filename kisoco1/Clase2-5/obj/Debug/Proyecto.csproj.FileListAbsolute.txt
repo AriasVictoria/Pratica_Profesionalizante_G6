@@ -1,0 +1,11 @@
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\bin\Debug\Clase2-5.exe.config
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\bin\Debug\Clase2-5.exe
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\bin\Debug\Clase2-5.pdb
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\bin\Debug\bibloteca.dll
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\bin\Debug\bibloteca.pdb
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Proyecto.csproj.CopyComplete
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Clase2-5.exe
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\Clase2-5\obj\Debug\Clase2-5.pdb

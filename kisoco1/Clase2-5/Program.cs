@@ -26,17 +26,6 @@ namespace Proyecto
             }
 
             {
-                Dueño dueñoagregado = new Dueño();
-                Console.WriteLine("agrega tu id ");
-                dueñoagregado.id = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("arranca por el nombre");
-                dueñoagregado.nombre_dueño = Console.ReadLine();
-
-                principal.altavendedor(dueñoagregado.id, dueñoagregado.nombre_dueño);
-            }
-
-            {
                 Producto Productoagregado = new Producto();
                 Console.WriteLine("agregar un producto");
 
@@ -77,19 +66,19 @@ namespace Proyecto
             }
 
             {
-                Carrito Carritoagregado = new Carrito();
+                Pedido Pedidoagregado = new Pedido();
                 Console.WriteLine("crea tu carrito");
 
                 Console.WriteLine("agregar tu producto al carrito");
-                Carritoagregado.tipo_producto = Console.ReadLine();
+                Pedidoagregado.tipo_producto = Console.ReadLine();
                 
                 Console.WriteLine("este es el precio de tu producto");
-                Carritoagregado.precio_producto = int.Parse(Console.ReadLine());
+                Pedidoagregado.precio_producto = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("este es el monto final");
-                Carritoagregado.final = int.Parse(Console.ReadLine());
+                Pedidoagregado.final = int.Parse(Console.ReadLine());
 
-                principal.altacarrito(Carritoagregado.final, Carritoagregado.precio_producto,Carritoagregado.tipo_producto);
+                principal.altapedido(Pedidoagregado.final, Pedidoagregado.precio_producto, Pedidoagregado.tipo_producto);
             }
         }
     }

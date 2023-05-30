@@ -14,9 +14,8 @@ namespace LogicaClase
     {
         List<Producto> ListaProducto = new List<Producto>();
         List<Proveedor> ListaProveedor = new List<Proveedor>();
-        List<Carrito> ListaCarrito = new List<Carrito>();
+        List<Pedido> ListaPedido = new List<Pedido>();
         List<Vendedor> ListaVendedor = new List<Vendedor>();
-        List<Dueño> Listadueño = new List<Dueño>();
 
         public void altavendedor(int Id, string Nombre_vendedor) //parametros
         {
@@ -24,14 +23,6 @@ namespace LogicaClase
             vendedornuevo.Id = Id;
             vendedornuevo.Nombre_vendedor = Nombre_vendedor;
             ListaVendedor.Add(vendedornuevo);
-        }
-
-        public void altadueño(int id, string Nombre_dueño) //parametros
-        {
-            Dueño dueñonuevo = new Dueño();
-            dueñonuevo.id = id;
-            dueñonuevo.nombre_dueño = Nombre_dueño;
-            Listadueño.Add(dueñonuevo);
         }
 
         public void altaproducto(int id, string codigo_barra, int precio, string nombrep, int stock) //parametros
@@ -71,13 +62,13 @@ namespace LogicaClase
             ListaProveedor.Add(proveedorconuevo);
         }
 
-        public void altacarrito(double final, double precio_producto, string tipo_producto) //parametros
+        public void altapedido(double final, double precio_producto, string tipo_producto) //parametros
         {
-            Carrito carritonuevo = new Carrito();
-            carritonuevo.final = final; ;
-            carritonuevo.precio_producto = precio_producto;
-            carritonuevo.tipo_producto = tipo_producto;
-            ListaCarrito.Add(carritonuevo);
+            Pedido pedidotonuevo = new Pedido();
+            pedidotonuevo.final = final; ;
+            pedidotonuevo.precio_producto = precio_producto;
+            pedidotonuevo.tipo_producto = tipo_producto;
+            ListaPedido.Add(pedidotonuevo);
         }
         
     }

@@ -7,14 +7,9 @@ using System.Threading.Tasks;
 
 namespace bibloteca
 {
-    public class Vendedor : Usuario
+    public class Vendedor
     {
         public int Id { get; set; }
         public string Nombre_vendedor { get; set; }
-        public Usuario usuariovendedor{ get; set; }
-        public override string validarUsuario()
-        {
-            return "hecho";
-        }
     }
 }
