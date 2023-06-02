@@ -53,10 +53,10 @@ namespace LogicaClase
                 ListaProducto.Remove(productoencontrado);
             }
         }
-        public void altaproveedor(string aoellido, string nombreproveedor, string lproductos) //parametros
+        public void altaproveedor(string apellido, string nombreproveedor, string lproductos) //parametros
         {
             Proveedor proveedorconuevo = new Proveedor();
-            proveedorconuevo.apellido = aoellido;
+            proveedorconuevo.apellido = apellido;
             proveedorconuevo.nombreproveedor = nombreproveedor;
             proveedorconuevo.lproductos = lproductos;
             ListaProveedor.Add(proveedorconuevo);
@@ -64,12 +64,30 @@ namespace LogicaClase
 
         public void altapedido(double final, double precio_producto, string tipo_producto) //parametros
         {
-            Pedido pedidotonuevo = new Pedido();
-            pedidotonuevo.final = final; ;
-            pedidotonuevo.precio_producto = precio_producto;
-            pedidotonuevo.tipo_producto = tipo_producto;
-            ListaPedido.Add(pedidotonuevo);
+            Pedido pedidonuevo = new Pedido();
+            pedidonuevo.final = final; ;
+            pedidonuevo.precio_producto = precio_producto;
+            pedidonuevo.tipo_producto = tipo_producto;
+            ListaPedido.Add(pedidonuevo);
         }
-        
+
+        public void bajapedido(double final, double precio_producto, string tipo_producto) //parametros
+        {
+            Pedido pedidoviejo = new Pedido();
+            pedidoviejo.final = final; ;
+            pedidoviejo.precio_producto = precio_producto;
+            pedidoviejo.tipo_producto = tipo_producto;
+            ListaPedido.Add(pedidoviejo);
+        }
+
+        public void bajaproveedor(string apellido, string nombreproveedor, string lproductos) //parametros
+        {
+            Proveedor proveedorsacado = new Proveedor();
+            proveedorsacado.apellido = apellido;
+            proveedorsacado.nombreproveedor = nombreproveedor;
+            proveedorsacado.lproductos = lproductos;
+            ListaProveedor.Add(proveedorsacado);
+        }
+
     }
 }
