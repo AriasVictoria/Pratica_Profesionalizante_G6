@@ -1,0 +1,6 @@
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\bin\Debug\Proyecto_Programacion.dll
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\bin\Debug\Proyecto_Programacion.pdb
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.csproj.AssemblyReference.cache
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.csproj.CoreCompileInputs.cache
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.dll
+C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.pdb

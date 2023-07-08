@@ -1,6 +1,0 @@
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\bin\Debug\bibloteca.dll
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\bin\Debug\bibloteca.pdb
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\obj\Debug\LogicaClase.csproj.AssemblyReference.cache
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\obj\Debug\LogicaClase.csproj.CoreCompileInputs.cache
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\obj\Debug\bibloteca.dll
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\kisoco1\bibloteca\obj\Debug\bibloteca.pdb
