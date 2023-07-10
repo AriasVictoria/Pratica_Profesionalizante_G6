@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Forms_Proyecto
 {
     public partial class Productos : Form
     {
+        Principal principal = new Principal();
+
+
         public Productos()
         {
             InitializeComponent();
@@ -20,48 +24,71 @@ namespace Forms_Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AltaProducto mifor = new AltaProducto();
-            mifor.ShowDialog();
+            Producto producto1 = new Producto();
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Producto.dameProducto();
+            producto1.Id = int.Parse(textBox1.Text);
+            producto1.NombreProducto = textBox2.Text;
+            producto1.Precio = int.Parse(textBox3.Text);
+            producto1.stock = int.Parse(textBox4.Text);
+
+            principal.AltaProdcuto(producto1);
+           
+
+            listBox1.DataSource = null;
+            listBox1.DisplayMember = "P";
+            listBox1.DataSource = principal.ListaProducto;
+            MessageBox.Show("Producto guardado");
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
 
         private void Productos_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Producto.dameProducto();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Producto seleccionado = (Producto)listBox1.SelectedItem;
+
+            Producto producto1 = new Producto();
+
+            producto1.Id = int.Parse(textBox1.Text);
+            producto1.NombreProducto = textBox2.Text;
+            producto1.Precio = int.Parse(textBox3.Text);
+            producto1.stock = int.Parse(textBox4.Text);
+
+            principal.ModificarProdcuto(producto1, seleccionado);
+            listBox1.DataSource = null;
+            listBox1.DisplayMember = "P";
+            listBox1.DataSource = principal.ListaProducto;
+            MessageBox.Show("Modificado con exito ");
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Producto Seleccionado = (Producto)dataGridView1.CurrentRow.DataBoundItem;
-            if (Seleccionado != null)
-            {
-                var confirmar = MessageBox.Show("Seguro que queres borar");
-                if (confirmar != DialogResult.OK)
-                {
-                    Producto.removeThisMarca(Seleccionado);
-                }
-                MessageBox.Show("Me elejiste: " + Seleccionado.ToString());
-            }
-            else
-            {
-                MessageBox.Show("No hay elegidos");
-            }
-            dataGridView1.DataSource = null;
+            Producto seleccionado = (Producto)listBox1.SelectedItem;
 
-            dataGridView1.DataSource = Producto.dameProducto();
+            principal.BajaProdcuto(seleccionado);
 
+            listBox1.DataSource = null;
+            listBox1.DisplayMember = "P";
+            listBox1.DataSource = principal.ListaProducto;
+
+            MessageBox.Show("Producto eliminado");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Form1 from = new Form1();
+            from.Show();
             this.Hide();
         }
     }

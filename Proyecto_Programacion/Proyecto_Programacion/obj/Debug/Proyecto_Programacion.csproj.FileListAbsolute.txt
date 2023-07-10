@@ -4,3 +4,9 @@ C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debu
 C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.csproj.CoreCompileInputs.cache
 C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.dll
 C:\Users\Vicky\source\repos\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.pdb
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\bin\Debug\Proyecto_Programacion.dll
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\bin\Debug\Proyecto_Programacion.pdb
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.csproj.AssemblyReference.cache
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.csproj.CoreCompileInputs.cache
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.dll
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Programacion\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.pdb

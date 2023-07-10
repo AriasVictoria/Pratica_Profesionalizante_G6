@@ -58,12 +58,6 @@
     <Compile Include="ADMINISTRADOR\BajaAdministrador.Designer.cs">
       <DependentUpon>BajaAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCTO\AltaProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRODUCTO\AltaProducto.Designer.cs">
-      <DependentUpon>AltaProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="PRODUCTO\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,9 +114,6 @@
     <EmbeddedResource Include="ADMINISTRADOR\BajaAdministrador.resx">
       <DependentUpon>BajaAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRODUCTO\AltaProducto.resx">
-      <DependentUpon>AltaProducto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PEDIDO\AltaPedido.resx">
       <DependentUpon>AltaPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +147,7 @@
     <EmbeddedResource Include="VENDEDOR\BajaVendedor.resx">
       <DependentUpon>BajaVendedor.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Proyecto_Programacion.Producto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
