@@ -1,4 +1,4 @@
-﻿using Proyecto_Programacion;
+﻿using BD_Proyecto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +24,11 @@ namespace Forms_Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Proveedor proveedor = new Proveedor();
+            proveedor.cuit = int.Parse(textBox5.Text);
+            proveedor.NombreProvedor = textBox6.Text;
+            proveedor.ApellidoProvedor = textBox7.Text;
+
             Producto producto1 = new Producto();
 
             producto1.Id = int.Parse(textBox1.Text);
@@ -31,8 +36,8 @@ namespace Forms_Proyecto
             producto1.Precio = int.Parse(textBox3.Text);
             producto1.stock = int.Parse(textBox4.Text);
 
-            principal.AltaProdcuto(producto1);
-           
+            principal.AltaProdcuto(producto1, proveedor);
+
 
             listBox1.DataSource = null;
             listBox1.DisplayMember = "P";
@@ -43,6 +48,9 @@ namespace Forms_Proyecto
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
         }
 
         private void Productos_Load(object sender, EventArgs e)
@@ -96,5 +104,6 @@ namespace Forms_Proyecto
         {
 
         }
+
     }
 }

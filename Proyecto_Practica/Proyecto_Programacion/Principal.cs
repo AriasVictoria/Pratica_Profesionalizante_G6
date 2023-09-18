@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Proyecto_Programacion
+namespace BD_Proyecto
 {
     public class Principal
     {
@@ -20,6 +21,7 @@ namespace Proyecto_Programacion
             vendedor1.NombreVendedor = vendedor.NombreVendedor;
             vendedor1.ApellidoVendedor = vendedor.ApellidoVendedor;
             vendedor1.contraseñaV = vendedor.contraseñaV;
+            vendedor1.numerolegajo = vendedor.numerolegajo;
 
             ListaVendedor.Add(vendedor);
         }
@@ -32,13 +34,17 @@ namespace Proyecto_Programacion
 
             ListaAdministrador.Add(administrador);
         }
-        public void AltaProdcuto(Producto producto)
+        public void AltaProdcuto(Producto producto, Proveedor proveedor)
         {
             Producto producto1 = new Producto();
             producto1.Id = producto.Id; 
             producto1.NombreProducto = producto.NombreProducto;
             producto1.Precio = producto.Precio;
             producto1.stock = producto.stock;
+            producto1.producto_proveedor.cuit = proveedor.cuit;
+            producto1.producto_proveedor.NombreProvedor = proveedor.NombreProvedor;
+            producto1.producto_proveedor.ApellidoProvedor = proveedor.ApellidoProvedor;
+
 
             ListaProducto.Add(producto1);
         }
@@ -47,16 +53,19 @@ namespace Proyecto_Programacion
             Proveedor proveedor1 = new Proveedor();
             proveedor1.NombreProvedor = proveedor.NombreProvedor;
             proveedor1.ApellidoProvedor = proveedor.ApellidoProvedor;
-            proveedor1.lproducto = proveedor.lproducto;
+            proveedor1.cuit = proveedor.cuit;
 
             ListaProveedor.Add(proveedor1);
         }
-        public void AltaPedido(Pedido pedido)
+        public void AltaPedido(Pedido pedido, Producto producto)
         {
             Pedido pedido1 = new Pedido();
             pedido1.MontoFinal = pedido.MontoFinal;
-            pedido1.Tipo_Producto = pedido.Tipo_Producto;
             pedido1.Precio_Producto = pedido.Precio_Producto;
+            pedido1.pedido.Id = producto.Id;
+            pedido1.pedido.NombreProducto = producto.NombreProducto;
+            pedido1.pedido.Precio = producto.Precio;
+            pedido1.pedido.stock = producto.stock;
 
             ListaPedido.Add(pedido1);
         }
@@ -95,6 +104,8 @@ namespace Proyecto_Programacion
             ModificarVendedor.NombreVendedor = NuevoVendedor.NombreVendedor;
             ModificarVendedor.ApellidoVendedor = NuevoVendedor.ApellidoVendedor;
             ModificarVendedor.contraseñaV = NuevoVendedor.contraseñaV;
+            ModificarVendedor.numerolegajo = NuevoVendedor.numerolegajo;
+
 
             ListaVendedor.Remove(VendedorEliminado);
             ListaVendedor.Add(ModificarVendedor);
@@ -131,7 +142,7 @@ namespace Proyecto_Programacion
             Proveedor proveedor1 = new Proveedor();
             ModificarProveedor.NombreProvedor = NuevoProveedor.NombreProvedor;
             ModificarProveedor.ApellidoProvedor = NuevoProveedor.ApellidoProvedor;
-            ModificarProveedor.lproducto = NuevoProveedor.lproducto;
+            ModificarProveedor.cuit = ModificarProveedor.cuit;
 
             ListaProveedor.Remove(ProveedorEliminado);
             ListaProveedor.Add(ModificarProveedor);
@@ -142,12 +153,13 @@ namespace Proyecto_Programacion
 
             Pedido pedido1 = new Pedido();
             ModificarPedido.MontoFinal = NuevoPedido.MontoFinal;
-            ModificarPedido.Tipo_Producto = NuevoPedido.Tipo_Producto;
             ModificarPedido.Precio_Producto = NuevoPedido.Precio_Producto;
 
             ListaPedido.Remove(pedidoEliminado);
             ListaPedido.Add(ModificarPedido);
         }
-
+        public void ValidacionTexto()
+        {
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Proyecto_Programacion;
+﻿using BD_Proyecto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -44,7 +45,8 @@ namespace Forms_Proyecto
 
             Proveedor1.NombreProvedor = textBox1.Text;
             Proveedor1.ApellidoProvedor = textBox2.Text;
-            
+            Proveedor1.cuit = int.Parse(textBox3.Text);
+
 
             principal.ModificarProveedor(Proveedor1, seleccionado);
             listBox1.DataSource = null;
@@ -63,9 +65,9 @@ namespace Forms_Proyecto
         private void button4_Click(object sender, EventArgs e)
         {
             Proveedor Proveedor1 = new Proveedor();
-
             Proveedor1.NombreProvedor = textBox1.Text;
             Proveedor1.ApellidoProvedor = textBox2.Text;
+            Proveedor1.cuit = int.Parse(textBox3.Text);
 
 
             principal.AltaProveedor(Proveedor1);
@@ -78,7 +80,46 @@ namespace Forms_Proyecto
 
             textBox1.Clear();
             textBox2.Clear();
+            textBox3.Clear();
 
+        }
+
+        private void BajaProveedor_Load(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            string input = textBox1.Text;
+            if (!Regex.IsMatch(input, "^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Ingrese solo letras (sin números ni caracteres especiales).", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            string input = textBox2.Text;
+            if (!Regex.IsMatch(input, "^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Ingrese solo letras (sin números ni caracteres especiales).", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox2.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (!int.TryParse(textBox3.Text, out int numero))
+            {
+                // Si no se puede convertir a un número entero, mostrar un mensaje de error
+                MessageBox.Show("Ingrese un número entero válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox3.Focus(); // Devuelve el foco al TextBox
+                e.Cancel = true; // Evita que el foco se mueva al siguiente control
+            }
         }
     }
 }

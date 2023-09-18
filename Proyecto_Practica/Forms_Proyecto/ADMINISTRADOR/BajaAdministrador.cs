@@ -1,4 +1,4 @@
-﻿using Proyecto_Programacion;
+﻿using BD_Proyecto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -81,6 +82,39 @@ namespace Forms_Proyecto
         private void BajaAdministrador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            string input = textBox1.Text;
+            if (!Regex.IsMatch(input, "^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Ingrese solo letras (sin números ni caracteres especiales).", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            string input = textBox2.Text;
+            if (!Regex.IsMatch(input, "^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Ingrese solo letras (sin números ni caracteres especiales).", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox2.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            string input = textBox3.Text;
+            if (!Regex.IsMatch(input, "^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Ingrese solo letras (sin números ni caracteres especiales).", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox3.Focus();
+                e.Cancel = true;
+            }
         }
     }
 }

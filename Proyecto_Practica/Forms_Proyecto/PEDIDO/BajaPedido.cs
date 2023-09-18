@@ -1,4 +1,4 @@
-﻿using Proyecto_Programacion;
+﻿using BD_Proyecto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +40,6 @@ namespace Forms_Proyecto
 
             pedido1.MontoFinal = int.Parse(textBox1.Text);
             pedido1.Precio_Producto =int.Parse( textBox2.Text);
-            pedido1.Tipo_Producto = comboBox1.Text;
 
             principal.ModificarPedido(pedido1, seleccionado);
             listBox1.DataSource = null;
@@ -58,13 +57,19 @@ namespace Forms_Proyecto
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Producto producto = new Producto();
+            producto.Id = int.Parse(textBox4.Text);
+            producto.NombreProducto = textBox3.Text;
+            producto.Precio = int.Parse(textBox6.Text);
+            producto.stock = int.Parse(textBox4.Text);
+
             Pedido Pedido1 = new Pedido();
 
             Pedido1.MontoFinal = int.Parse(textBox1.Text);
             Pedido1.Precio_Producto = int.Parse(textBox2.Text);
-            Pedido1.Tipo_Producto = comboBox1.Text;
 
-            principal.AltaPedido(Pedido1);
+
+            principal.AltaPedido(Pedido1, producto);
 
 
             listBox1.DataSource = null;
@@ -89,5 +94,12 @@ namespace Forms_Proyecto
         {
 
         }
+
+        private void BajaPedido_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

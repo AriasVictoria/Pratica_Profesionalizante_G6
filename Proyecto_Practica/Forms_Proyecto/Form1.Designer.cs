@@ -63,9 +63,10 @@
             this.pROVEEDORToolStripMenuItem,
             this.pRODUCTOToolStripMenuItem,
             this.pEDIDOToolStripMenuItem});
+            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mENUToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // vENDEDORToolStripMenuItem
@@ -74,14 +75,14 @@
             this.vENDEDORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bajaToolStripMenuItem});
             this.vENDEDORToolStripMenuItem.Name = "vENDEDORToolStripMenuItem";
-            this.vENDEDORToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.vENDEDORToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vENDEDORToolStripMenuItem.Text = "VENDEDOR";
             this.vENDEDORToolStripMenuItem.Click += new System.EventHandler(this.vENDEDORToolStripMenuItem_Click);
             // 
             // bajaToolStripMenuItem
             // 
             this.bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            this.bajaToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.bajaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bajaToolStripMenuItem.Text = "ABM";
             this.bajaToolStripMenuItem.Click += new System.EventHandler(this.bajaToolStripMenuItem_Click);
             // 
@@ -91,13 +92,13 @@
             this.aDMINISTRADORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bajaToolStripMenuItem1});
             this.aDMINISTRADORToolStripMenuItem.Name = "aDMINISTRADORToolStripMenuItem";
-            this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aDMINISTRADORToolStripMenuItem.Text = "ADMINISTRADOR";
             // 
             // bajaToolStripMenuItem1
             // 
             this.bajaToolStripMenuItem1.Name = "bajaToolStripMenuItem1";
-            this.bajaToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.bajaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.bajaToolStripMenuItem1.Text = "ABM";
             this.bajaToolStripMenuItem1.Click += new System.EventHandler(this.bajaToolStripMenuItem1_Click);
             // 
@@ -107,13 +108,13 @@
             this.pROVEEDORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bajaToolStripMenuItem2});
             this.pROVEEDORToolStripMenuItem.Name = "pROVEEDORToolStripMenuItem";
-            this.pROVEEDORToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.pROVEEDORToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pROVEEDORToolStripMenuItem.Text = "PROVEEDOR";
             // 
             // bajaToolStripMenuItem2
             // 
             this.bajaToolStripMenuItem2.Name = "bajaToolStripMenuItem2";
-            this.bajaToolStripMenuItem2.Size = new System.Drawing.Size(100, 22);
+            this.bajaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.bajaToolStripMenuItem2.Text = "ABM";
             this.bajaToolStripMenuItem2.Click += new System.EventHandler(this.bajaToolStripMenuItem2_Click);
             // 
@@ -123,14 +124,14 @@
             this.pRODUCTOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bajaToolStripMenuItem3});
             this.pRODUCTOToolStripMenuItem.Name = "pRODUCTOToolStripMenuItem";
-            this.pRODUCTOToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.pRODUCTOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pRODUCTOToolStripMenuItem.Text = "PRODUCTO";
             this.pRODUCTOToolStripMenuItem.Click += new System.EventHandler(this.pRODUCTOToolStripMenuItem_Click);
             // 
             // bajaToolStripMenuItem3
             // 
             this.bajaToolStripMenuItem3.Name = "bajaToolStripMenuItem3";
-            this.bajaToolStripMenuItem3.Size = new System.Drawing.Size(100, 22);
+            this.bajaToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.bajaToolStripMenuItem3.Text = "ABM";
             this.bajaToolStripMenuItem3.Click += new System.EventHandler(this.bajaToolStripMenuItem3_Click);
             // 
@@ -140,13 +141,13 @@
             this.pEDIDOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bajaToolStripMenuItem4});
             this.pEDIDOToolStripMenuItem.Name = "pEDIDOToolStripMenuItem";
-            this.pEDIDOToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.pEDIDOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pEDIDOToolStripMenuItem.Text = "PEDIDO";
             // 
             // bajaToolStripMenuItem4
             // 
             this.bajaToolStripMenuItem4.Name = "bajaToolStripMenuItem4";
-            this.bajaToolStripMenuItem4.Size = new System.Drawing.Size(100, 22);
+            this.bajaToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.bajaToolStripMenuItem4.Text = "ABM";
             this.bajaToolStripMenuItem4.Click += new System.EventHandler(this.bajaToolStripMenuItem4_Click);
             // 

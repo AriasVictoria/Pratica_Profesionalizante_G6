@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto_Programacion
+namespace BD_Proyecto
 {
     public class Proveedor
     {
+        public int cuit { get; set; }
         public string NombreProvedor { get; set; }  
         public string ApellidoProvedor { get; set; }
-        public string lproducto { get; set; }
         public string PV
         {
             get { return  ", nombre: " + NombreProvedor + ", Apellido: " + ApellidoProvedor ; }

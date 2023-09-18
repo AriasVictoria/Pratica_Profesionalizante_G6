@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto_Programacion
+namespace BD_Proyecto
 {
     public class Administrador
     {

@@ -126,9 +126,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Proyecto_Programacion\Proyecto_Programacion.csproj">
+    <ProjectReference Include="..\Proyecto_Programacion\BD_Proyecto.csproj">
       <Project>{052435cb-df22-4e30-aa2e-948d0a5cb08a}</Project>
-      <Name>Proyecto_Programacion</Name>
+      <Name>BD_Proyecto</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
