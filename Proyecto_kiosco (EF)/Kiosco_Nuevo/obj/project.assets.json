@@ -3206,11 +3206,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Kiosco_Nuevo\\Kiosco_Nuevo.csproj",
+      "projectUniqueName": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Kiosco_Nuevo\\Kiosco_Nuevo.csproj",
       "projectName": "Kiosco_Nuevo",
-      "projectPath": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Kiosco_Nuevo\\Kiosco_Nuevo.csproj",
+      "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Kiosco_Nuevo\\Kiosco_Nuevo.csproj",
       "packagesPath": "C:\\Users\\Vicky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Kiosco_Nuevo\\obj\\",
+      "outputPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Kiosco_Nuevo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3231,8 +3231,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj": {
-              "projectPath": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj"
+            "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj": {
+              "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj"
             }
           }
         }

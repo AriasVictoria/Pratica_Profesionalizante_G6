@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Back
 {
-    public class Pedido
+    public class Pedidos
     {
-        public double MontoFinal { get; set; }
+        [Key]
+        public int Id { get; set; }
         public double Precio_Producto { get; set; }
-        public Producto pedido { get; set; }
+        public double MontoFinal { get; set; }
+        
+
 
         /*public string PD
         {

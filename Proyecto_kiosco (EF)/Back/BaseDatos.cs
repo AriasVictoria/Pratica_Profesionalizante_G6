@@ -9,15 +9,16 @@ namespace Back
 {
     public class BaseDatos : DbContext
     {
-        public DbSet<Producto> Productos { get; set; }
-        public DbSet<Pedido> Pedidos { get; set; }
-        public DbSet<Proveedor> Proveedores { get; set; }
-        public DbSet<Vendedor> Vendedores { get; set; }
-        public DbSet<Administrador> Administradores { get; set; }
+        public DbSet<Productos> Productos { get; set; }
+        public DbSet<Pedidos> Pedidos { get; set; }
+        public DbSet<Proveedores> proveedores { get; set; }
+        public DbSet<Vendedores> Vendedores { get; set; }
+        public DbSet<Administradores> Administradores { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=VARIAS\\SQLEXPRESS;database=BD_Kiosco;trusted_connection=true;Encrypt=False");
+            optionsBuilder.UseSqlServer("server=VARIAS\\SQLEXPRESS;database=Kiosco_Base;trusted_connection=true;Encrypt=False");
         }
+       
     }
 }

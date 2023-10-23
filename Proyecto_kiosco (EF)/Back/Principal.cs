@@ -2,70 +2,26 @@
 {
     public class Principal
     {
-        public void AltaAdministrador(Administrador administrador)
+        public void AltaAdmnistradores(Administradores administrador)
         {
             using (var context = new BaseDatos())
             {
-                var NuevoAdministrador = new Administrador
+                var NuevoAdmnistrador = new Administradores
                 {
                     NombreAdministrador = administrador.NombreAdministrador,
                     ApellidoAdministrador = administrador.ApellidoAdministrador,
-                    contraseña = administrador.contraseña
-
+                    contraseña = administrador.contraseña,
                 };
-                context.Administradores.Add(NuevoAdministrador);
+                context.Administradores.Add(NuevoAdmnistrador);
                 context.SaveChanges();
             }
         }
-        public void AltaPedido(Pedido pedido)
+        public void AltaVendedor(Vendedores vendedor)
         {
             using (var context = new BaseDatos())
             {
-                var NuevoPedido = new Pedido
+                var NuevoVendedor = new Vendedores
                 {
-                    MontoFinal = pedido.MontoFinal,
-                    Precio_Producto = pedido.Precio_Producto,
-                };
-                context.Pedidos.Add(NuevoPedido);
-                context.SaveChanges();
-            }
-        }
-        public void AltaProducto(Producto producto)
-        {
-            using (var context = new BaseDatos())
-            {
-                var NuevoProducto = new Producto
-                {
-                    Id = producto.Id,
-                    NombreProducto = producto.NombreProducto,
-                    Precio = producto.Precio,
-                    stock = producto.stock,
-                };
-                context.Productos.Add(NuevoProducto);
-                context.SaveChanges();
-            }
-        }
-        public void AltaProveedor(Proveedor proveedor)
-        {
-            using (var context = new BaseDatos())
-            {
-                var NuevoProveedor = new Proveedor
-                {
-                    cuit = proveedor.cuit,
-                    NombreProvedor = proveedor.NombreProvedor,
-                    ApellidoProvedor = proveedor.ApellidoProvedor,
-                };
-                context.Proveedores.Add(NuevoProveedor);
-                context.SaveChanges();
-            }
-        }
-        public void AltaVendedor(Vendedor vendedor)
-        {
-            using (var context = new BaseDatos())
-            {
-                var NuevoVendedor = new Vendedor
-                {
-                    numerolegajo = vendedor.numerolegajo,
                     NombreVendedor = vendedor.NombreVendedor,
                     ApellidoVendedor = vendedor.ApellidoVendedor,
                     contraseñaV = vendedor.contraseñaV,
@@ -74,132 +30,163 @@
                 context.SaveChanges();
             }
         }
-        public void EliminarAdministrador(Administrador administrador)
+        public void AltaPedido(Pedidos pedido)
         {
             using (var context = new BaseDatos())
             {
-                var BorrarAdministrador = context.Administradores.Find(administrador.NombreAdministrador,
-                    administrador.ApellidoAdministrador, administrador.contraseña);
-                if(BorrarAdministrador != null)
+                var NuevoPedido = new Pedidos
                 {
-                    context.Administradores.Remove(BorrarAdministrador);
-                    context.SaveChanges();
-                }
+                    Precio_Producto = pedido.Precio_Producto,
+                    MontoFinal = pedido.MontoFinal,
+                };
+                context.Pedidos.Add(NuevoPedido);
+                context.SaveChanges();
             }
         }
-        public void EliminarPedido(Pedido pedido)
+        public void AltaProducto(Productos producto)
         {
             using (var context = new BaseDatos())
             {
-                var BorrarPedido = context.Administradores.Find(pedido.MontoFinal,pedido.Precio_Producto);
-                if (BorrarPedido != null)
+                var NuevoProducto = new Productos
                 {
-                    context.Administradores.Remove(BorrarPedido);
-                    context.SaveChanges();
-                }
+                    NombreProducto = producto.NombreProducto,
+                    Precio = producto.Precio,
+                    stock = producto.stock,
+                };
+                context.Productos.Add(NuevoProducto);
+                context.SaveChanges();
+
             }
         }
-        public void EliminarProducto(Producto producto)
+        public void AltaProveedor(Proveedores proveedor)
         {
             using (var context = new BaseDatos())
             {
-                var BorrarProcuto = context.Productos.Find(producto.Id, producto.NombreProducto,
-                    producto.Precio, producto.stock);
-                if (BorrarProcuto != null)
+                var NuevoProveedor = new Proveedores
                 {
-                    context.Productos.Remove(BorrarProcuto);
-                    context.SaveChanges();
-                }
+                    cuit = proveedor.cuit,
+                    NombreProvedor = proveedor.NombreProvedor,
+                    ApellidoProvedor = proveedor.ApellidoProvedor,
+                };
+                context.proveedores.Add(NuevoProveedor);
+                context.SaveChanges();
+
             }
         }
-        public void EliminarProveedor(Proveedor proveedor)
+        public void EliminarAdministrador(Administradores administrador2)
         {
             using (var context = new BaseDatos())
             {
-                var Borrarproveedor = context.Proveedores.Find(proveedor.cuit, proveedor.NombreProvedor,
-                    proveedor.ApellidoProvedor);
-                if (Borrarproveedor != null)
-                {
-                    context.Proveedores.Remove(Borrarproveedor);
-                    context.SaveChanges();
-                }
+                context.Administradores.Remove(administrador2);
+                context.SaveChanges();
             }
         }
-        public void EliminarVendedor(Vendedor vendedor)
+        public void EliminarPedido(Pedidos pedido)
         {
             using (var context = new BaseDatos())
             {
-                var BorrarVendedor = context.Vendedores.Find(vendedor.NombreVendedor,vendedor.ApellidoVendedor,
-                    vendedor.contraseñaV);
-                if (BorrarVendedor != null)
-                {
-                    context.Vendedores.Remove(BorrarVendedor);
-                    context.SaveChanges();
-                }
+                context.Pedidos.Remove(pedido);
+                context.SaveChanges();
             }
         }
-        public void ActucalizarAdministrador(Administrador administrador)
+        public void EliminarProducto(Productos producto)
         {
             using (var context = new BaseDatos())
             {
-                var ModificarAdmnistrador = context.Administradores.Find(administrador.NombreAdministrador,
-                    administrador.ApellidoAdministrador, administrador.contraseña);
-                if (ModificarAdmnistrador != null)
-                {
-                    context.Administradores.Remove(ModificarAdmnistrador);
-                    context.SaveChanges();
-                }
+                context.Productos.Remove(producto);
+                context.SaveChanges();
             }
         }
-        public void ActucalizarPedido(Pedido pedido)
+        public void EliminarProveedor(Proveedores proveedor)
         {
             using (var context = new BaseDatos())
             {
-                var ModificarPedido = context.Pedidos.Find(pedido.MontoFinal, pedido.Precio_Producto);
-                if (ModificarPedido != null)
-                {
-                    context.Pedidos.Remove(ModificarPedido);
-                    context.SaveChanges();
-                }
+                context.proveedores.Remove(proveedor);
+                context.SaveChanges();
             }
         }
-        public void ActucalizarProducto(Producto producto)
+        public void EliminarVendedor(Vendedores vendedor)
         {
             using (var context = new BaseDatos())
             {
-                var ModificarProducto = context.Productos.Find(producto.Id, producto.NombreProducto,
-                    producto.Precio, producto.stock);
-                if (ModificarProducto != null)
-                {
-                    context.Productos.Remove(ModificarProducto);
-                    context.SaveChanges();
-                }
+                context.Vendedores.Remove(vendedor);
+                context.SaveChanges();
             }
         }
-        public void ActucalizarProveedor(Proveedor proveedor)
+        public void ActucalizarAdministrador(Administradores Nuevoadministrador)
         {
             using (var context = new BaseDatos())
             {
-                var ModificarProveedor = context.Proveedores.Find(proveedor.cuit, proveedor.NombreProvedor,
-                    proveedor.ApellidoProvedor);
-                if (ModificarProveedor != null)
-                {
-                    context.Proveedores.Remove(ModificarProveedor);
-                    context.SaveChanges();
-                }
+                Administradores ModificarAdministrador = new Administradores();
+
+                Administradores administrador1 = new Administradores();
+                ModificarAdministrador.Id_Administrador = Nuevoadministrador.Id_Administrador;
+                ModificarAdministrador.NombreAdministrador = Nuevoadministrador.NombreAdministrador;
+                ModificarAdministrador.ApellidoAdministrador = Nuevoadministrador.ApellidoAdministrador;
+                ModificarAdministrador.contraseña = Nuevoadministrador.contraseña;
+
+                context.Administradores.Update(Nuevoadministrador);
             }
         }
-        public void ActucalizarVendedor(Vendedor vendedor)
+        public void ActucalizarPedido(Pedidos NuevoPedido)
         {
             using (var context = new BaseDatos())
             {
-                var ModificarVendedor = context.Vendedores.Find(vendedor.NombreVendedor, vendedor.ApellidoVendedor,
-                    vendedor.contraseñaV);
-                if (ModificarVendedor != null)
-                {
-                    context.Vendedores.Remove(ModificarVendedor);
-                    context.SaveChanges();
-                }
+                Pedidos ModificarPedido = new Pedidos();
+
+                Pedidos pedido1 = new Pedidos();
+
+                ModificarPedido.Id = NuevoPedido.Id;
+                ModificarPedido.MontoFinal = NuevoPedido.MontoFinal;
+                ModificarPedido.Precio_Producto = NuevoPedido.Precio_Producto;
+
+                context.Pedidos.Update(NuevoPedido);
+            }
+
+        }
+        
+        public void ActucalizarProducto(Productos NuevoProducto)
+        {
+            using (var context = new BaseDatos())
+            {
+                Productos ModififcarProducto = new Productos();
+
+                Productos producto1 = new Productos();
+                ModififcarProducto.Id = NuevoProducto.Id;
+                ModififcarProducto.NombreProducto = NuevoProducto.NombreProducto;
+                ModififcarProducto.Precio = NuevoProducto.Precio;
+                ModififcarProducto.stock = NuevoProducto.stock;
+
+                context.Productos.Update(NuevoProducto);
+            }
+        }
+        public void ActucalizarProveedor(Proveedores NuevoProveedor)
+        {
+            using (var context = new BaseDatos())
+            {
+                Proveedores ModificarProveedor = new Proveedores();
+
+                Proveedores proveedor1 = new Proveedores();
+                ModificarProveedor.NombreProvedor = NuevoProveedor.NombreProvedor;
+                ModificarProveedor.ApellidoProvedor = NuevoProveedor.ApellidoProvedor;
+                ModificarProveedor.cuit = ModificarProveedor.cuit;
+
+                context.proveedores.Update(NuevoProveedor);
+            }
+        }
+        public void ActucalizarVendedor(Vendedores NuevoVendedor)
+        {
+            using (var context = new BaseDatos())
+            {
+                Vendedores ModificarVendedor = new Vendedores();
+
+                Vendedores vendedor1 = new Vendedores();
+                ModificarVendedor.NombreVendedor = NuevoVendedor.NombreVendedor;
+                ModificarVendedor.ApellidoVendedor = NuevoVendedor.ApellidoVendedor;
+                ModificarVendedor.contraseñaV = NuevoVendedor.contraseñaV;
+                ModificarVendedor.numerolegajo = NuevoVendedor.numerolegajo;
+
+                context.Vendedores.Update(NuevoVendedor);
             }
         }
         public void ObtenerAdmnistrador()
@@ -244,7 +231,7 @@
         {
             using (var context = new BaseDatos())
             {
-                var Proveedores = context.Proveedores.ToList();
+                var Proveedores = context.proveedores.ToList();
                 foreach (var proveedor in Proveedores)
                 {
                     Console.WriteLine($"Id: {proveedor.cuit}," +

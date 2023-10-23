@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj": {}
+    "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj": {
+    "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj",
+        "projectUniqueName": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj",
         "projectName": "Back",
-        "projectPath": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\Back.csproj",
+        "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\Back.csproj",
         "packagesPath": "C:\\Users\\Vicky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vicky\\source\\repos\\Proyecto_kiosco\\Back\\obj\\",
+        "outputPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Proyecto_kiosco (EF)\\Back\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,12 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
             },
