@@ -14,8 +14,6 @@ namespace Back
         public double Precio_Producto { get; set; }
         public double MontoFinal { get; set; }
         
-
-
         /*public string PD
         {
             get { return " Monto: " + MontoFinal + ", precio: " + Precio_Producto; }

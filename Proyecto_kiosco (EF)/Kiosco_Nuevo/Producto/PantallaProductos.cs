@@ -37,8 +37,7 @@ namespace Kiosco_Nuevo.Producto
         private void button5_Click(object sender, EventArgs e)
         {
             Back.Productos producto = new Back.Productos();
-            
-            producto.Id = int.Parse(textBox6.Text);
+
             producto.NombreProducto = textBox2.Text;
             producto.Precio = int.Parse(textBox5.Text);
             producto.stock = int.Parse(textBox3.Text);
@@ -70,19 +69,13 @@ namespace Kiosco_Nuevo.Producto
             Back.Productos seleccionado = (Back.Productos)dataGridView1.CurrentRow.DataBoundItem;
 
             Back.Productos producto1 = new Back.Productos();
-            Back.Proveedores proveedores = new Back.Proveedores();
 
-            producto1.Id = int.Parse(textBox6.Text);
+            producto1.Id = seleccionado.Id;
             producto1.NombreProducto = textBox2.Text;
             producto1.Precio = int.Parse(textBox5.Text);
             producto1.stock = int.Parse(textBox3.Text);
 
-            principal.ActucalizarProducto(seleccionado);
-
-            BindingSource aBind = new BindingSource();
-            aBind.Add(producto1);
-            aBind.EndEdit();
-            dataGridView1.DataSource = aBind;
+            principal.ActucalizarProducto(producto1, seleccionado);
 
             textBox2.Clear();
             textBox3.Clear();
@@ -90,6 +83,16 @@ namespace Kiosco_Nuevo.Producto
             textBox6.Clear();
 
             MessageBox.Show("Modificado con exito ");
+
+            BindingSource aBind = new BindingSource();
+            aBind.EndEdit();
+            dataGridView1.DataSource = aBind;
+
+            using (var context = new BaseDatos())
+            {
+                List<Back.Productos> productos = context.Productos.ToList();
+                dataGridView1.DataSource = productos;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,12 +100,17 @@ namespace Kiosco_Nuevo.Producto
             Back.Productos seleccionado = (Back.Productos)dataGridView1.CurrentRow.DataBoundItem;
             principal.EliminarProducto(seleccionado);
 
+            MessageBox.Show("Eliminado con exito ");
+
             BindingSource aBind = new BindingSource();
-            aBind.Remove(seleccionado);
-            aBind.EndEdit();
+            //aBind.Remove(seleccionado);
             dataGridView1.DataSource = aBind;
 
-            MessageBox.Show("Eliminado con exito ");
+            using (var context = new BaseDatos())
+            {
+                List<Back.Productos> productos = context.Productos.ToList();
+                dataGridView1.DataSource = productos;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

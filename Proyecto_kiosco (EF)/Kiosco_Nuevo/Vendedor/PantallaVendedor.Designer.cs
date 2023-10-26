@@ -40,14 +40,14 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             dataGridView1 = new DataGridView();
-            vendedorBindingSource = new BindingSource(components);
-            vendedorBindingSource1 = new BindingSource(components);
-            textBox1 = new TextBox();
-            label1 = new Label();
             numerolegajo = new DataGridViewTextBoxColumn();
             nombreVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             contraseñaVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            vendedorBindingSource = new BindingSource(components);
+            vendedorBindingSource1 = new BindingSource(components);
+            textBox1 = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vendedorBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vendedorBindingSource1).BeginInit();
@@ -161,30 +161,6 @@
             dataGridView1.Size = new Size(457, 178);
             dataGridView1.TabIndex = 13;
             // 
-            // vendedorBindingSource
-            // 
-            vendedorBindingSource.DataSource = typeof(Back.Vendedores);
-            // 
-            // vendedorBindingSource1
-            // 
-            vendedorBindingSource1.DataSource = typeof(Back.Vendedores);
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(147, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 15);
-            label1.TabIndex = 14;
-            label1.Text = "Numero legajo";
-            // 
             // numerolegajo
             // 
             numerolegajo.DataPropertyName = "numerolegajo";
@@ -208,6 +184,30 @@
             contraseñaVDataGridViewTextBoxColumn.DataPropertyName = "contraseñaV";
             contraseñaVDataGridViewTextBoxColumn.HeaderText = "contraseñaV";
             contraseñaVDataGridViewTextBoxColumn.Name = "contraseñaVDataGridViewTextBoxColumn";
+            // 
+            // vendedorBindingSource
+            // 
+            vendedorBindingSource.DataSource = typeof(Back.Vendedores);
+            // 
+            // vendedorBindingSource1
+            // 
+            vendedorBindingSource1.DataSource = typeof(Back.Vendedores);
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(147, 52);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 15);
+            label1.TabIndex = 14;
+            label1.Text = "Numero legajo";
             // 
             // PantallaVendedor
             // 

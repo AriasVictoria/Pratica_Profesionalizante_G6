@@ -41,10 +41,10 @@
             button1 = new Button();
             pedidoBindingSource = new BindingSource(components);
             dataGridView1 = new DataGridView();
-            pedidoBindingSource1 = new BindingSource(components);
             Id = new DataGridViewTextBoxColumn();
             precioProductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             montoFinalDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            pedidoBindingSource1 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)pedidoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pedidoBindingSource1).BeginInit();
@@ -162,10 +162,6 @@
             dataGridView1.Size = new Size(445, 147);
             dataGridView1.TabIndex = 50;
             // 
-            // pedidoBindingSource1
-            // 
-            pedidoBindingSource1.DataSource = typeof(Back.Pedidos);
-            // 
             // Id
             // 
             Id.DataPropertyName = "Id";
@@ -183,6 +179,10 @@
             montoFinalDataGridViewTextBoxColumn.DataPropertyName = "MontoFinal";
             montoFinalDataGridViewTextBoxColumn.HeaderText = "MontoFinal";
             montoFinalDataGridViewTextBoxColumn.Name = "montoFinalDataGridViewTextBoxColumn";
+            // 
+            // pedidoBindingSource1
+            // 
+            pedidoBindingSource1.DataSource = typeof(Back.Pedidos);
             // 
             // PantallaPedido
             // 

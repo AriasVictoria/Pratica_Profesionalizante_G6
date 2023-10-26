@@ -111,24 +111,28 @@
             {
                 context.Vendedores.Remove(vendedor);
                 context.SaveChanges();
+
+
             }
         }
-        public void ActucalizarAdministrador(Administradores Nuevoadministrador)
+        public void ActucalizarAdministrador(Administradores Nuevoadministrador, Administradores seleccionado)
         {
             using (var context = new BaseDatos())
             {
                 Administradores ModificarAdministrador = new Administradores();
 
                 Administradores administrador1 = new Administradores();
-                ModificarAdministrador.Id_Administrador = Nuevoadministrador.Id_Administrador;
+                //ModificarAdministrador.Id_Administrador = Nuevoadministrador.Id_Administrador;
                 ModificarAdministrador.NombreAdministrador = Nuevoadministrador.NombreAdministrador;
                 ModificarAdministrador.ApellidoAdministrador = Nuevoadministrador.ApellidoAdministrador;
                 ModificarAdministrador.contraseña = Nuevoadministrador.contraseña;
 
                 context.Administradores.Update(Nuevoadministrador);
+                context.SaveChanges();
+
             }
         }
-        public void ActucalizarPedido(Pedidos NuevoPedido)
+        public void ActucalizarPedido(Pedidos NuevoPedido, Pedidos seleccionado)
         {
             using (var context = new BaseDatos())
             {
@@ -136,31 +140,35 @@
 
                 Pedidos pedido1 = new Pedidos();
 
-                ModificarPedido.Id = NuevoPedido.Id;
+                //ModificarPedido.Id = NuevoPedido.Id;
                 ModificarPedido.MontoFinal = NuevoPedido.MontoFinal;
                 ModificarPedido.Precio_Producto = NuevoPedido.Precio_Producto;
 
                 context.Pedidos.Update(NuevoPedido);
+                context.SaveChanges();
+
             }
 
         }
         
-        public void ActucalizarProducto(Productos NuevoProducto)
+        public void ActucalizarProducto(Productos NuevoProducto, Productos seleccionado)
         {
             using (var context = new BaseDatos())
             {
                 Productos ModififcarProducto = new Productos();
 
                 Productos producto1 = new Productos();
-                ModififcarProducto.Id = NuevoProducto.Id;
+                //ModififcarProducto.Id = NuevoProducto.Id;
                 ModififcarProducto.NombreProducto = NuevoProducto.NombreProducto;
                 ModififcarProducto.Precio = NuevoProducto.Precio;
                 ModififcarProducto.stock = NuevoProducto.stock;
 
                 context.Productos.Update(NuevoProducto);
+                context.SaveChanges();
+
             }
         }
-        public void ActucalizarProveedor(Proveedores NuevoProveedor)
+        public void ActucalizarProveedor(Proveedores NuevoProveedor, Proveedores seleccionado)
         {
             using (var context = new BaseDatos())
             {
@@ -172,21 +180,25 @@
                 ModificarProveedor.cuit = ModificarProveedor.cuit;
 
                 context.proveedores.Update(NuevoProveedor);
+                context.SaveChanges();
+
             }
         }
-        public void ActucalizarVendedor(Vendedores NuevoVendedor)
+        public void ActucalizarVendedor(Vendedores NuevoVendedor, Vendedores seleccionado)
         {
             using (var context = new BaseDatos())
             {
                 Vendedores ModificarVendedor = new Vendedores();
 
                 Vendedores vendedor1 = new Vendedores();
+
                 ModificarVendedor.NombreVendedor = NuevoVendedor.NombreVendedor;
                 ModificarVendedor.ApellidoVendedor = NuevoVendedor.ApellidoVendedor;
                 ModificarVendedor.contraseñaV = NuevoVendedor.contraseñaV;
-                ModificarVendedor.numerolegajo = NuevoVendedor.numerolegajo;
+                //numerolegajo = NuevoVendedor.numerolegajo;
 
                 context.Vendedores.Update(NuevoVendedor);
+                context.SaveChanges();
             }
         }
         public void ObtenerAdmnistrador()

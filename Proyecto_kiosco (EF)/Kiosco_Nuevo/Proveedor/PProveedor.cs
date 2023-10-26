@@ -36,8 +36,9 @@ namespace Kiosco_Nuevo.Proveedor
         {
             using (var context = new BaseDatos())
             {
-                List<Back.Proveedores> proveedor = context.proveedores.ToList();
-                dataGridView1.DataSource = proveedor;
+                List<Back.Proveedores> proveedor2 = context.proveedores.ToList();
+
+                dataGridView1.DataSource = proveedor2;
             }
         }
 
@@ -45,7 +46,6 @@ namespace Kiosco_Nuevo.Proveedor
         {
             Back.Proveedores proveedor1 = new Back.Proveedores();
 
-            proveedor1.Id = int.Parse(textBox4.Text);
             proveedor1.cuit = textBox1.Text;
             proveedor1.NombreProvedor = textBox2.Text;
             proveedor1.ApellidoProvedor = textBox3.Text;
@@ -59,7 +59,6 @@ namespace Kiosco_Nuevo.Proveedor
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            textBox4.Clear();
 
             MessageBox.Show("agregado con exito");
         }
@@ -70,17 +69,12 @@ namespace Kiosco_Nuevo.Proveedor
 
             Back.Proveedores proveedor1 = new Back.Proveedores();
 
-            proveedor1.Id = int.Parse(textBox4.Text);
+            proveedor1.Id = seleccionado.Id;
             proveedor1.cuit = textBox1.Text;
             proveedor1.NombreProvedor = textBox2.Text;
             proveedor1.ApellidoProvedor = textBox3.Text;
 
-            principal.ActucalizarProveedor(seleccionado);
-
-            BindingSource aBind = new BindingSource();
-            aBind.Add(proveedor1);
-            aBind.EndEdit();
-            dataGridView1.DataSource = aBind;
+            principal.ActucalizarProveedor(proveedor1, seleccionado);
 
             textBox1.Clear();
             textBox2.Clear();
@@ -88,6 +82,16 @@ namespace Kiosco_Nuevo.Proveedor
             textBox4.Clear();
 
             MessageBox.Show("Modificado con exito ");
+
+            BindingSource aBind = new BindingSource();
+            aBind.EndEdit();
+            dataGridView1.DataSource = aBind;
+
+            using (var context = new BaseDatos())
+            {
+                List<Back.Proveedores> proveedor = context.proveedores.ToList();
+                dataGridView1.DataSource = proveedor;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -96,12 +100,18 @@ namespace Kiosco_Nuevo.Proveedor
 
             principal.EliminarProveedor(seleccionado);
 
+            MessageBox.Show("Eliminado con exito ");
+
             BindingSource aBind = new BindingSource();
-            aBind.Remove(seleccionado);
+            //aBind.Remove(seleccionado);
             aBind.EndEdit();
             dataGridView1.DataSource = aBind;
 
-            MessageBox.Show("Eliminado con exito ");
+            using (var context = new BaseDatos())
+            {
+                List<Back.Proveedores> proveedor = context.proveedores.ToList();
+                dataGridView1.DataSource = proveedor;
+            }
         }
     }
 }

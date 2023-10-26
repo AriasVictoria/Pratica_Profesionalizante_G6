@@ -40,11 +40,11 @@
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            proveedorBindingSource = new BindingSource(components);
             Id = new DataGridViewTextBoxColumn();
             cuitDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nombreProvedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoProvedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            proveedorBindingSource = new BindingSource(components);
             label4 = new Label();
             textBox4 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -154,15 +154,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, cuitDataGridViewTextBoxColumn, nombreProvedorDataGridViewTextBoxColumn, apellidoProvedorDataGridViewTextBoxColumn });
             dataGridView1.DataSource = proveedorBindingSource;
-            dataGridView1.Location = new Point(375, 43);
+            dataGridView1.Location = new Point(343, 43);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(374, 168);
+            dataGridView1.Size = new Size(445, 168);
             dataGridView1.TabIndex = 25;
-            // 
-            // proveedorBindingSource
-            // 
-            proveedorBindingSource.DataSource = typeof(Back.Proveedores);
             // 
             // Id
             // 
@@ -187,6 +183,10 @@
             apellidoProvedorDataGridViewTextBoxColumn.DataPropertyName = "ApellidoProvedor";
             apellidoProvedorDataGridViewTextBoxColumn.HeaderText = "ApellidoProvedor";
             apellidoProvedorDataGridViewTextBoxColumn.Name = "apellidoProvedorDataGridViewTextBoxColumn";
+            // 
+            // proveedorBindingSource
+            // 
+            proveedorBindingSource.DataSource = typeof(Back.Proveedores);
             // 
             // label4
             // 
