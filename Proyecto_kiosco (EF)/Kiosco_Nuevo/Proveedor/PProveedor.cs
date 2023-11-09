@@ -46,7 +46,7 @@ namespace Kiosco_Nuevo.Proveedor
         {
             Back.Proveedores proveedor1 = new Back.Proveedores();
 
-            proveedor1.cuit = textBox1.Text;
+            proveedor1.cuit = int.Parse(textBox1.Text);
             proveedor1.NombreProvedor = textBox2.Text;
             proveedor1.ApellidoProvedor = textBox3.Text;
 
@@ -70,7 +70,7 @@ namespace Kiosco_Nuevo.Proveedor
             Back.Proveedores proveedor1 = new Back.Proveedores();
 
             proveedor1.Id = seleccionado.Id;
-            proveedor1.cuit = textBox1.Text;
+            proveedor1.cuit = int.Parse(textBox1.Text);
             proveedor1.NombreProvedor = textBox2.Text;
             proveedor1.ApellidoProvedor = textBox3.Text;
 
@@ -79,7 +79,6 @@ namespace Kiosco_Nuevo.Proveedor
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            textBox4.Clear();
 
             MessageBox.Show("Modificado con exito ");
 

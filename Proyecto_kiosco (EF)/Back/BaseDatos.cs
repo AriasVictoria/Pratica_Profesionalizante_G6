@@ -14,6 +14,8 @@ namespace Back
         public DbSet<Proveedores> proveedores { get; set; }
         public DbSet<Vendedores> Vendedores { get; set; }
         public DbSet<Administradores> Administradores { get; set; }
+        public DbSet<DetallePedido> DetallePedidos { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

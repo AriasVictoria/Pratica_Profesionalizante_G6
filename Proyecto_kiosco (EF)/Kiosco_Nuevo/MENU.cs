@@ -1,6 +1,5 @@
+using Back;
 using Kiosco_Nuevo.Administrador;
-using Kiosco_Nuevo.Pedido;
-using Kiosco_Nuevo.Producto;
 using Kiosco_Nuevo.Proveedor;
 using Kiosco_Nuevo.Vendedor;
 
@@ -36,15 +35,13 @@ namespace Kiosco_Nuevo
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PantallaProductos productos = new PantallaProductos();
-            productos.Show();
-            this.Hide();
+
         }
 
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PantallaPedido pedido = new PantallaPedido();
-            pedido.Show();
+            DetallePedido detalle = new DetallePedido();
+            detalle.Show();
             this.Hide();
         }
 

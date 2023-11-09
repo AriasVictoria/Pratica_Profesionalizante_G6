@@ -1,4 +1,7 @@
-﻿namespace Back
+﻿using System.Globalization;
+using System.Runtime.InteropServices.ObjectiveC;
+
+namespace Back
 {
     public class Principal
     {
@@ -30,14 +33,14 @@
                 context.SaveChanges();
             }
         }
+        
         public void AltaPedido(Pedidos pedido)
         {
             using (var context = new BaseDatos())
             {
                 var NuevoPedido = new Pedidos
                 {
-                    Precio_Producto = pedido.Precio_Producto,
-                    MontoFinal = pedido.MontoFinal,
+                    NombreVendedor = pedido.NombreVendedor,
                 };
                 context.Pedidos.Add(NuevoPedido);
                 context.SaveChanges();
@@ -50,8 +53,9 @@
                 var NuevoProducto = new Productos
                 {
                     NombreProducto = producto.NombreProducto,
-                    Precio = producto.Precio,
                     stock = producto.stock,
+                    tipo_producto = producto.tipo_producto,
+                    NombreProvedor = producto.NombreProvedor,
                 };
                 context.Productos.Add(NuevoProducto);
                 context.SaveChanges();
@@ -60,17 +64,42 @@
         }
         public void AltaProveedor(Proveedores proveedor)
         {
-            using (var context = new BaseDatos())
+            using (BaseDatos context = new BaseDatos())
             {
-                var NuevoProveedor = new Proveedores
-                {
+                Proveedores NuevoProveedor = new Proveedores
+                {  
                     cuit = proveedor.cuit,
                     NombreProvedor = proveedor.NombreProvedor,
                     ApellidoProvedor = proveedor.ApellidoProvedor,
                 };
+
                 context.proveedores.Add(NuevoProveedor);
                 context.SaveChanges();
 
+            }
+        }
+        public void AltaDetallePedido(DetallePedido detalle)
+        {
+            using (var context = new BaseDatos())
+            {
+                var NuevoDetallePedido = new DetallePedido
+                {
+                    Cantidad_Producto = detalle.Cantidad_Producto,
+                    Precio_Producto = detalle.Precio_Producto,
+                    Fecha_Pedido = detalle.Fecha_Pedido,
+                    NombreProducto = detalle.NombreProducto,
+                    tipo_producto = detalle.tipo_producto,
+                };
+                context.DetallePedidos.Add(NuevoDetallePedido);
+                context.SaveChanges();
+            }
+        }
+        public void EliminarDetallePedido(DetallePedido detalle1)
+        {
+            using (var context = new BaseDatos())
+            {
+                context.DetallePedidos.Remove(detalle1);
+                context.SaveChanges();
             }
         }
         public void EliminarAdministrador(Administradores administrador2)
@@ -140,17 +169,32 @@
 
                 Pedidos pedido1 = new Pedidos();
 
-                //ModificarPedido.Id = NuevoPedido.Id;
-                ModificarPedido.MontoFinal = NuevoPedido.MontoFinal;
-                ModificarPedido.Precio_Producto = NuevoPedido.Precio_Producto;
+                ModificarPedido.NombreVendedor = NuevoPedido.NombreVendedor;
 
                 context.Pedidos.Update(NuevoPedido);
-                context.SaveChanges();
-
+                context.SaveChanges(); 
             }
 
         }
-        
+        public void ActualizarDetallePedido(DetallePedido NuevoDetalle, DetallePedido seleccionado)
+        {
+            using (var context = new BaseDatos())
+            {
+                DetallePedido ModificarDetallePedido = new DetallePedido();
+
+                DetallePedido detalle1 = new DetallePedido();
+
+                ModificarDetallePedido.Cantidad_Producto = NuevoDetalle.Cantidad_Producto;
+                ModificarDetallePedido.Precio_Producto = NuevoDetalle.Precio_Producto;
+                ModificarDetallePedido.Fecha_Pedido = NuevoDetalle.Fecha_Pedido;
+                ModificarDetallePedido.NombreProducto = NuevoDetalle.NombreProducto;
+                ModificarDetallePedido.tipo_producto = NuevoDetalle.tipo_producto;
+
+                context.DetallePedidos.Update(NuevoDetalle);
+                context.SaveChanges();
+            }
+
+        }
         public void ActucalizarProducto(Productos NuevoProducto, Productos seleccionado)
         {
             using (var context = new BaseDatos())
@@ -160,8 +204,8 @@
                 Productos producto1 = new Productos();
                 //ModififcarProducto.Id = NuevoProducto.Id;
                 ModififcarProducto.NombreProducto = NuevoProducto.NombreProducto;
-                ModififcarProducto.Precio = NuevoProducto.Precio;
                 ModififcarProducto.stock = NuevoProducto.stock;
+                ModififcarProducto.NombreProvedor = NuevoProducto.NombreProvedor;
 
                 context.Productos.Update(NuevoProducto);
                 context.SaveChanges();
@@ -201,67 +245,14 @@
                 context.SaveChanges();
             }
         }
-        public void ObtenerAdmnistrador()
+       // devuelve toda la lista de prod
+        public List<Productos> ObtenerProducto()
         {
             using (var context = new BaseDatos())
             {
-                var administradores = context.Administradores.ToList();
-                foreach(var administrador in administradores)
-                {
-                    Console.WriteLine($"Nombre: {administrador.NombreAdministrador}," +
-                        $"Apellido: {administrador.ApellidoAdministrador}, " +
-                        $"Contraseña: {administrador.contraseña}");
-                }
+                return context.Productos.ToList();
             }
         }
-        public void ObtenerPedido()
-        {
-            using (var context = new BaseDatos())
-            {
-                var Pedidos = context.Pedidos.ToList();
-                foreach (var pedido in Pedidos)
-                {
-                    Console.WriteLine($"Id: {pedido.MontoFinal}," +
-                        $"Apellido: {pedido.Precio_Producto}");
-                }
-            }
-        }
-        public void ObtenerProducto()
-        {
-            using (var context = new BaseDatos())
-            {
-                var Productos = context.Productos.ToList();
-                foreach (var producto in Productos)
-                {
-                    Console.WriteLine($"Id: {producto.Id}," +
-                        $"Nombre: {producto.NombreProducto}, Precio: {producto.Precio}," +
-                        $"Stock: {producto.stock}");
-                }
-            }
-        }
-        public void ObtenerProveedor()
-        {
-            using (var context = new BaseDatos())
-            {
-                var Proveedores = context.proveedores.ToList();
-                foreach (var proveedor in Proveedores)
-                {
-                    Console.WriteLine($"Id: {proveedor.cuit}," +
-                        $"Nombre: {proveedor.NombreProvedor}, Apellido: {proveedor.ApellidoProvedor}");
-                }
-            }
-        }
-        public void ObtenerVendedor()
-        {
-            using (var context = new BaseDatos())
-            {
-                var Vendedores = context.Vendedores.ToList();
-                foreach (var vendedor in Vendedores)
-                {
-                    Console.WriteLine($"Id: {vendedor.NombreVendedor}," +
-                        $"Apellido: {vendedor.ApellidoVendedor}, Contraseña: {vendedor.contraseñaV}");
-                }
-            }
-        }
+
     }
 }

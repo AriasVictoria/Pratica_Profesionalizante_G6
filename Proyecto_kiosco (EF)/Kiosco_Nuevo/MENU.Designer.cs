@@ -33,7 +33,6 @@
             vendedorToolStripMenuItem = new ToolStripMenuItem();
             administradorToolStripMenuItem = new ToolStripMenuItem();
             proveedorToolStripMenuItem = new ToolStripMenuItem();
-            productoToolStripMenuItem = new ToolStripMenuItem();
             pedidoToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
@@ -51,9 +50,9 @@
             // 
             // mENÚToolStripMenuItem
             // 
-            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, administradorToolStripMenuItem, proveedorToolStripMenuItem, productoToolStripMenuItem, pedidoToolStripMenuItem });
+            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, administradorToolStripMenuItem, proveedorToolStripMenuItem, pedidoToolStripMenuItem });
             mENÚToolStripMenuItem.Font = new Font("Gill Sans Ultra Bold", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            mENÚToolStripMenuItem.ForeColor = Color.Fuchsia;
+            mENÚToolStripMenuItem.ForeColor = Color.HotPink;
             mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             mENÚToolStripMenuItem.Size = new Size(84, 29);
             mENÚToolStripMenuItem.Text = "MENÚ";
@@ -63,7 +62,7 @@
             vendedorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             vendedorToolStripMenuItem.ForeColor = Color.Black;
             vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            vendedorToolStripMenuItem.Size = new Size(161, 22);
+            vendedorToolStripMenuItem.Size = new Size(180, 22);
             vendedorToolStripMenuItem.Text = "Vendedor";
             vendedorToolStripMenuItem.Click += vendedorToolStripMenuItem_Click;
             // 
@@ -71,7 +70,7 @@
             // 
             administradorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            administradorToolStripMenuItem.Size = new Size(161, 22);
+            administradorToolStripMenuItem.Size = new Size(180, 22);
             administradorToolStripMenuItem.Text = "Administrador";
             administradorToolStripMenuItem.Click += administradorToolStripMenuItem_Click;
             // 
@@ -79,24 +78,16 @@
             // 
             proveedorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            proveedorToolStripMenuItem.Size = new Size(161, 22);
+            proveedorToolStripMenuItem.Size = new Size(180, 22);
             proveedorToolStripMenuItem.Text = "Proveedor";
             proveedorToolStripMenuItem.Click += proveedorToolStripMenuItem_Click;
-            // 
-            // productoToolStripMenuItem
-            // 
-            productoToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            productoToolStripMenuItem.Size = new Size(161, 22);
-            productoToolStripMenuItem.Text = "Producto";
-            productoToolStripMenuItem.Click += productoToolStripMenuItem_Click;
             // 
             // pedidoToolStripMenuItem
             // 
             pedidoToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            pedidoToolStripMenuItem.Size = new Size(161, 22);
-            pedidoToolStripMenuItem.Text = "Pedido";
+            pedidoToolStripMenuItem.Size = new Size(180, 22);
+            pedidoToolStripMenuItem.Text = "Detalle Pedido";
             pedidoToolStripMenuItem.Click += pedidoToolStripMenuItem_Click;
             // 
             // pictureBox1
@@ -113,6 +104,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
@@ -132,7 +124,6 @@
         private ToolStripMenuItem vendedorToolStripMenuItem;
         private ToolStripMenuItem administradorToolStripMenuItem;
         private ToolStripMenuItem proveedorToolStripMenuItem;
-        private ToolStripMenuItem productoToolStripMenuItem;
         private ToolStripMenuItem pedidoToolStripMenuItem;
         private PictureBox pictureBox1;
     }

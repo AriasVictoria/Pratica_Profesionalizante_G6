@@ -46,8 +46,6 @@
             contraseñaVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             vendedorBindingSource = new BindingSource(components);
             vendedorBindingSource1 = new BindingSource(components);
-            textBox1 = new TextBox();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vendedorBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vendedorBindingSource1).BeginInit();
@@ -55,7 +53,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(255, 128, 255);
+            button1.BackColor = Color.FromArgb(255, 128, 128);
             button1.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(345, 279);
             button1.Name = "button1";
@@ -67,7 +65,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(255, 128, 255);
+            button2.BackColor = Color.FromArgb(255, 128, 128);
             button2.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(458, 279);
             button2.Name = "button2";
@@ -79,7 +77,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(255, 128, 255);
+            button3.BackColor = Color.FromArgb(255, 128, 128);
             button3.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button3.Location = new Point(566, 279);
             button3.Name = "button3";
@@ -91,7 +89,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(255, 128, 255);
+            button4.BackColor = Color.FromArgb(255, 128, 128);
             button4.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Location = new Point(678, 279);
             button4.Name = "button4";
@@ -104,7 +102,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 97);
+            label2.Location = new Point(17, 67);
             label2.Name = "label2";
             label2.Size = new Size(104, 15);
             label2.TabIndex = 6;
@@ -113,7 +111,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(19, 152);
+            label3.Location = new Point(17, 122);
             label3.Name = "label3";
             label3.Size = new Size(104, 15);
             label3.TabIndex = 7;
@@ -122,7 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(19, 199);
+            label4.Location = new Point(17, 169);
             label4.Name = "label4";
             label4.Size = new Size(67, 15);
             label4.TabIndex = 8;
@@ -130,21 +128,21 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(145, 97);
+            textBox2.Location = new Point(143, 67);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(147, 144);
+            textBox3.Location = new Point(145, 114);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 11;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(147, 195);
+            textBox4.Location = new Point(145, 165);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 12;
@@ -193,29 +191,12 @@
             // 
             vendedorBindingSource1.DataSource = typeof(Back.Vendedores);
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(147, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 15);
-            label1.TabIndex = 14;
-            label1.Text = "Numero legajo";
-            // 
             // PantallaVendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -256,7 +237,5 @@
         private DataGridViewTextBoxColumn nombreVendedorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn apellidoVendedorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn contraseñaVDataGridViewTextBoxColumn;
-        private TextBox textBox1;
-        private Label label1;
     }
 }

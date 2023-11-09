@@ -42,7 +42,6 @@ namespace Kiosco_Nuevo.Vendedor
             principal.ActucalizarVendedor(vendedor1, seleccionado);
 
 
-            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
@@ -80,20 +79,6 @@ namespace Kiosco_Nuevo.Vendedor
 
         private void PantallaVendedor_Load(object sender, EventArgs e)
         {
-            using (var context = new BaseDatos())
-            {
-                List<Back.Vendedores> vendedor2 = context.Vendedores.ToList();
-
-                dataGridView1.DataSource = vendedor2;
-            }
-            if (numerolegajo == null)
-            {
-                textBox1.Visible = true;
-            }
-            else
-            {
-                textBox1.Visible = false;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,7 +95,6 @@ namespace Kiosco_Nuevo.Vendedor
             aBind.DataSource = vendedor1;
             dataGridView1.DataSource = aBind;
 
-            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();

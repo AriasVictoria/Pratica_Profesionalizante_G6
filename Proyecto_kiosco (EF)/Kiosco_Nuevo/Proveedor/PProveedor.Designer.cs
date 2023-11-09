@@ -45,29 +45,27 @@
             nombreProvedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoProvedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             proveedorBindingSource = new BindingSource(components);
-            label4 = new Label();
-            textBox4 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)proveedorBindingSource).BeginInit();
             SuspendLayout();
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(169, 213);
+            textBox3.Location = new Point(169, 163);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 24;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(167, 166);
+            textBox2.Location = new Point(167, 116);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 23;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(167, 112);
+            textBox1.Location = new Point(167, 62);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 22;
@@ -75,7 +73,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(41, 221);
+            label3.Location = new Point(41, 171);
             label3.Name = "label3";
             label3.Size = new Size(108, 15);
             label3.TabIndex = 20;
@@ -84,7 +82,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(41, 166);
+            label2.Location = new Point(41, 116);
             label2.Name = "label2";
             label2.Size = new Size(108, 15);
             label2.TabIndex = 19;
@@ -93,7 +91,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 115);
+            label1.Location = new Point(41, 65);
             label1.Name = "label1";
             label1.Size = new Size(29, 15);
             label1.TabIndex = 18;
@@ -102,7 +100,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(128, 255, 255);
+            button4.BackColor = Color.FromArgb(255, 128, 128);
             button4.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Location = new Point(687, 293);
             button4.Name = "button4";
@@ -114,7 +112,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(128, 255, 255);
+            button3.BackColor = Color.FromArgb(255, 128, 128);
             button3.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button3.Location = new Point(572, 295);
             button3.Name = "button3";
@@ -126,7 +124,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(128, 255, 255);
+            button2.BackColor = Color.FromArgb(255, 128, 128);
             button2.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(464, 293);
             button2.Name = "button2";
@@ -138,7 +136,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(128, 255, 255);
+            button1.BackColor = Color.FromArgb(255, 128, 128);
             button1.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(356, 295);
             button1.Name = "button1";
@@ -188,29 +186,12 @@
             // 
             proveedorBindingSource.DataSource = typeof(Back.Proveedores);
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(41, 65);
-            label4.Name = "label4";
-            label4.Size = new Size(17, 15);
-            label4.TabIndex = 26;
-            label4.Text = "Id";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(169, 62);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 27;
-            // 
             // PProveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(label4);
             Controls.Add(dataGridView1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -248,7 +229,5 @@
         private DataGridViewTextBoxColumn cuitDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nombreProvedorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn apellidoProvedorDataGridViewTextBoxColumn;
-        private Label label4;
-        private TextBox textBox4;
     }
 }

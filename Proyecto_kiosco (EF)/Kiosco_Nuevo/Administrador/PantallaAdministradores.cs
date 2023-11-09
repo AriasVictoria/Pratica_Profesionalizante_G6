@@ -35,7 +35,6 @@ namespace Kiosco_Nuevo.Administrador
             aBind.DataSource = administrador2;
             dataGridView1.DataSource = aBind;
 
-            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
@@ -88,7 +87,6 @@ namespace Kiosco_Nuevo.Administrador
 
             principal.ActucalizarAdministrador(administrador2, seleccionado);
 
-            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();

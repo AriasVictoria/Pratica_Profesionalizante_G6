@@ -9,9 +9,8 @@ namespace Back
 {
     public class Proveedores
     {
-        [Key]
         public int Id { get; set; }
-        public string cuit { get; set; }
+        public int cuit { get; set; }
         public string NombreProvedor { get; set; }
         public string ApellidoProvedor { get; set; }
         /*public string PV
