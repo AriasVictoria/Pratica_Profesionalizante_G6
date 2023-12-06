@@ -25,9 +25,9 @@ namespace Kiosco_Nuevo.Administrador
         {
             Back.Administradores administrador2 = new Back.Administradores();
 
-            administrador2.NombreAdministrador = textBox2.Text;
-            administrador2.ApellidoAdministrador = textBox3.Text;
-            administrador2.contraseña = textBox4.Text;
+            administrador2.NombreAdministrador = textBoxNombre.Text;
+            administrador2.ApellidoAdministrador = textBoxApellido.Text;
+            administrador2.contrasenia = textBoxContrasenia.Text;
 
             principal.AltaAdmnistradores(administrador2);
 
@@ -35,9 +35,9 @@ namespace Kiosco_Nuevo.Administrador
             aBind.DataSource = administrador2;
             dataGridView1.DataSource = aBind;
 
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            textBoxNombre.Clear();
+            textBoxApellido.Clear();
+            textBoxContrasenia.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -80,16 +80,16 @@ namespace Kiosco_Nuevo.Administrador
 
             Back.Administradores administrador2 = new Back.Administradores();
 
-            administrador2.Id_Administrador = seleccionado.Id_Administrador;
-            administrador2.NombreAdministrador = textBox2.Text;
-            administrador2.ApellidoAdministrador = textBox3.Text;
-            administrador2.contraseña = textBox4.Text;
+            administrador2.Id = seleccionado.Id;
+            administrador2.NombreAdministrador = textBoxNombre.Text;
+            administrador2.ApellidoAdministrador = textBoxApellido.Text;
+            administrador2.contrasenia = textBoxContrasenia.Text;
 
             principal.ActucalizarAdministrador(administrador2, seleccionado);
 
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            textBoxNombre.Clear();
+            textBoxApellido.Clear();
+            textBoxContrasenia.Clear();
 
             MessageBox.Show("Modificado con exito ");
 

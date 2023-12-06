@@ -36,14 +36,13 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textBoxnombre = new TextBox();
+            textBoxApellido = new TextBox();
+            textBoxContrasenia = new TextBox();
             dataGridView1 = new DataGridView();
             numerolegajo = new DataGridViewTextBoxColumn();
             nombreVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            contraseñaVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             vendedorBindingSource = new BindingSource(components);
             vendedorBindingSource1 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -126,32 +125,32 @@
             label4.TabIndex = 8;
             label4.Text = "Contraseña";
             // 
-            // textBox2
+            // textBoxnombre
             // 
-            textBox2.Location = new Point(143, 67);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 10;
+            textBoxnombre.Location = new Point(143, 67);
+            textBoxnombre.Name = "textBoxnombre";
+            textBoxnombre.Size = new Size(100, 23);
+            textBoxnombre.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxApellido
             // 
-            textBox3.Location = new Point(145, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 11;
+            textBoxApellido.Location = new Point(145, 114);
+            textBoxApellido.Name = "textBoxApellido";
+            textBoxApellido.Size = new Size(100, 23);
+            textBoxApellido.TabIndex = 11;
             // 
-            // textBox4
+            // textBoxContrasenia
             // 
-            textBox4.Location = new Point(145, 165);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 12;
+            textBoxContrasenia.Location = new Point(145, 165);
+            textBoxContrasenia.Name = "textBoxContrasenia";
+            textBoxContrasenia.Size = new Size(100, 23);
+            textBoxContrasenia.TabIndex = 12;
             // 
             // dataGridView1
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { numerolegajo, nombreVendedorDataGridViewTextBoxColumn, apellidoVendedorDataGridViewTextBoxColumn, contraseñaVDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { numerolegajo, nombreVendedorDataGridViewTextBoxColumn, apellidoVendedorDataGridViewTextBoxColumn });
             dataGridView1.DataSource = vendedorBindingSource;
             dataGridView1.Location = new Point(331, 40);
             dataGridView1.Name = "dataGridView1";
@@ -177,12 +176,6 @@
             apellidoVendedorDataGridViewTextBoxColumn.HeaderText = "ApellidoVendedor";
             apellidoVendedorDataGridViewTextBoxColumn.Name = "apellidoVendedorDataGridViewTextBoxColumn";
             // 
-            // contraseñaVDataGridViewTextBoxColumn
-            // 
-            contraseñaVDataGridViewTextBoxColumn.DataPropertyName = "contraseñaV";
-            contraseñaVDataGridViewTextBoxColumn.HeaderText = "contraseñaV";
-            contraseñaVDataGridViewTextBoxColumn.Name = "contraseñaVDataGridViewTextBoxColumn";
-            // 
             // vendedorBindingSource
             // 
             vendedorBindingSource.DataSource = typeof(Back.Vendedores);
@@ -198,9 +191,9 @@
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxContrasenia);
+            Controls.Add(textBoxApellido);
+            Controls.Add(textBoxnombre);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -227,9 +220,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxnombre;
+        private TextBox textBoxApellido;
+        private TextBox textBoxContrasenia;
         private DataGridView dataGridView1;
         private BindingSource vendedorBindingSource;
         private BindingSource vendedorBindingSource1;

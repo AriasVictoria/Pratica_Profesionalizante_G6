@@ -35,16 +35,16 @@ namespace Kiosco_Nuevo.Vendedor
             Back.Vendedores vendedor1 = new Back.Vendedores();
 
             vendedor1.numerolegajo = seleccionado.numerolegajo;
-            vendedor1.NombreVendedor = textBox2.Text;
-            vendedor1.ApellidoVendedor = textBox3.Text;
-            vendedor1.contraseñaV = textBox4.Text;
+            vendedor1.NombreVendedor = textBoxnombre.Text;
+            vendedor1.ApellidoVendedor = textBoxApellido.Text;
+            vendedor1.contrasenia = textBoxContrasenia.Text;
 
             principal.ActucalizarVendedor(vendedor1, seleccionado);
 
 
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            textBoxnombre.Clear();
+            textBoxApellido.Clear();
+            textBoxContrasenia.Clear();
 
             MessageBox.Show("Modificado con exito ");
 
@@ -85,9 +85,9 @@ namespace Kiosco_Nuevo.Vendedor
         {
             Back.Vendedores vendedor1 = new Back.Vendedores();
 
-            vendedor1.NombreVendedor = textBox2.Text;
-            vendedor1.ApellidoVendedor = textBox3.Text;
-            vendedor1.contraseñaV = textBox4.Text;
+            vendedor1.NombreVendedor = textBoxnombre.Text;
+            vendedor1.ApellidoVendedor = textBoxApellido.Text;
+            vendedor1.contrasenia = textBoxContrasenia.Text;
 
             principal.AltaVendedor(vendedor1);
 
@@ -95,9 +95,9 @@ namespace Kiosco_Nuevo.Vendedor
             aBind.DataSource = vendedor1;
             dataGridView1.DataSource = aBind;
 
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            textBoxnombre.Clear();
+            textBoxApellido.Clear();
+            textBoxContrasenia.Clear();
         }
     }
 }

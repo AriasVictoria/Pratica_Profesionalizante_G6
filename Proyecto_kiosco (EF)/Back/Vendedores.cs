@@ -13,7 +13,7 @@ namespace Back
         public int numerolegajo { get; set; }
         public string NombreVendedor { get; set; }
         public string ApellidoVendedor { get; set; }
-        public string contraseñaV { get; set; }
+        public string contrasenia { get; set; }
 
         /*public string V
         {

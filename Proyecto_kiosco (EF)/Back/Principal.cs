@@ -13,7 +13,7 @@ namespace Back
                 {
                     NombreAdministrador = administrador.NombreAdministrador,
                     ApellidoAdministrador = administrador.ApellidoAdministrador,
-                    contraseña = administrador.contraseña,
+                    contrasenia = administrador.contrasenia,
                 };
                 context.Administradores.Add(NuevoAdmnistrador);
                 context.SaveChanges();
@@ -27,7 +27,7 @@ namespace Back
                 {
                     NombreVendedor = vendedor.NombreVendedor,
                     ApellidoVendedor = vendedor.ApellidoVendedor,
-                    contraseñaV = vendedor.contraseñaV,
+                    contrasenia = vendedor.contrasenia,
                 };
                 context.Vendedores.Add(NuevoVendedor);
                 context.SaveChanges();
@@ -154,7 +154,7 @@ namespace Back
                 //ModificarAdministrador.Id_Administrador = Nuevoadministrador.Id_Administrador;
                 ModificarAdministrador.NombreAdministrador = Nuevoadministrador.NombreAdministrador;
                 ModificarAdministrador.ApellidoAdministrador = Nuevoadministrador.ApellidoAdministrador;
-                ModificarAdministrador.contraseña = Nuevoadministrador.contraseña;
+                ModificarAdministrador.contrasenia = Nuevoadministrador.contrasenia;
 
                 context.Administradores.Update(Nuevoadministrador);
                 context.SaveChanges();
@@ -238,7 +238,7 @@ namespace Back
 
                 ModificarVendedor.NombreVendedor = NuevoVendedor.NombreVendedor;
                 ModificarVendedor.ApellidoVendedor = NuevoVendedor.ApellidoVendedor;
-                ModificarVendedor.contraseñaV = NuevoVendedor.contraseñaV;
+                ModificarVendedor.contrasenia = NuevoVendedor.contrasenia;
                 //numerolegajo = NuevoVendedor.numerolegajo;
 
                 context.Vendedores.Update(NuevoVendedor);

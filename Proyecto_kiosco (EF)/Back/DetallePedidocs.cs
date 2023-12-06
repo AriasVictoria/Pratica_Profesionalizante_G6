@@ -11,6 +11,7 @@ namespace Back
     {
         public Pedidos Id { get; set; }
         public Productos Id_Producto { get; set; }
+        [Key]
         public string codigo_barra { get; set; }
         public string NombreProducto { get; set; }
         public string tipo_producto { get; set; }

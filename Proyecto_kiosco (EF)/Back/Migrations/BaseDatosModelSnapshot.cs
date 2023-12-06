@@ -24,11 +24,11 @@ namespace Back.Migrations
 
             modelBuilder.Entity("Back.Administradores", b =>
                 {
-                    b.Property<int>("Id_Administrador")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Administrador"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ApellidoAdministrador")
                         .IsRequired()
@@ -38,11 +38,11 @@ namespace Back.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("contraseña")
+                    b.Property<string>("contrasenia")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id_Administrador");
+                    b.HasKey("Id");
 
                     b.ToTable("Administradores");
                 });
@@ -174,7 +174,7 @@ namespace Back.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("contraseñaV")
+                    b.Property<string>("contrasenia")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

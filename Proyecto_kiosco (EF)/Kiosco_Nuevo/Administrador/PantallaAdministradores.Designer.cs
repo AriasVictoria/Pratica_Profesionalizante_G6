@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxContrasenia = new TextBox();
+            textBoxApellido = new TextBox();
+            textBoxNombre = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -49,26 +49,26 @@
             ((System.ComponentModel.ISupportInitialize)administradorBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // textBox4
+            // textBoxContrasenia
             // 
-            textBox4.Location = new Point(178, 150);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 24;
+            textBoxContrasenia.Location = new Point(178, 150);
+            textBoxContrasenia.Name = "textBoxContrasenia";
+            textBoxContrasenia.Size = new Size(100, 23);
+            textBoxContrasenia.TabIndex = 24;
             // 
-            // textBox3
+            // textBoxApellido
             // 
-            textBox3.Location = new Point(178, 99);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 23;
+            textBoxApellido.Location = new Point(178, 99);
+            textBoxApellido.Name = "textBoxApellido";
+            textBoxApellido.Size = new Size(100, 23);
+            textBoxApellido.TabIndex = 23;
             // 
-            // textBox2
+            // textBoxNombre
             // 
-            textBox2.Location = new Point(176, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 22;
+            textBoxNombre.Location = new Point(176, 52);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.Size = new Size(100, 23);
+            textBoxNombre.TabIndex = 22;
             // 
             // label3
             // 
@@ -192,9 +192,9 @@
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxContrasenia);
+            Controls.Add(textBoxApellido);
+            Controls.Add(textBoxNombre);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -212,9 +212,9 @@
         }
 
         #endregion
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox textBoxContrasenia;
+        private TextBox textBoxApellido;
+        private TextBox textBoxNombre;
         private Label label3;
         private Label label2;
         private Label label1;

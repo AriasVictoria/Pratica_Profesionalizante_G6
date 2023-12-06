@@ -10,10 +10,10 @@ namespace Back
 {
     public class Administradores
     {
-        public int Id_Administrador { get; set; }
+        public int Id { get; set; }
         public string NombreAdministrador { get; set; }
         public string ApellidoAdministrador { get; set; }
-        public string contraseña { get; set; }
+        public string contrasenia { get; set; }
        /* public string A
         {
             get { return "Nombre: " + NombreAdministrador + ", Apellido: " + ApellidoAdministrador + ", Contraseña: " + contraseña; }
