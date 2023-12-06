@@ -54,14 +54,15 @@ namespace Kiosco_Nuevo
         {
 
         }
-        private void ingresoUsuario(object sender, EventArgs e)
+        /*
+        private void ingresoUsuario_Click(object sender, EventArgs e)
         {
             using (var context = new BaseDatos())
             {
-                var usuario = context.Vendedores.FirstOrDefault(u => u.NombreVendedor == textBoxnombre.Text, 
-                    u => u.ApellidoVendedor == textBoxApellido.Text);
+                var usuario = context.Usuarios.FirstOrDefault(u => u.nombre == textBoxnombre.Text, 
+                    u => u.apellido == textBoxApellido.Text);
 
-                if (usuario != null && usuario.contrasenina == textBoxContrasenia.Text)
+                if (usuario != null && usuario.contrasenia == textBoxContrasenia.Text)
                 {
                     if (usuario.tipo == "vendedor")
                     {
@@ -86,5 +87,7 @@ namespace Kiosco_Nuevo
             }
 
         }
+        */
+
     }
 }
