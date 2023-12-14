@@ -40,6 +40,7 @@
             textBox4 = new TextBox();
             comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
+            numeropedido = new DataGridViewTextBoxColumn();
             fechaPedidoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -141,13 +142,19 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaPedidoDataGridViewTextBoxColumn, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, cantidadProductoDataGridViewTextBoxColumn, precioProductoDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { numeropedido, fechaPedidoDataGridViewTextBoxColumn, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, cantidadProductoDataGridViewTextBoxColumn, precioProductoDataGridViewTextBoxColumn });
             dataGridView1.DataSource = detallePedidoBindingSource;
             dataGridView1.Location = new Point(106, 160);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(548, 150);
+            dataGridView1.Size = new Size(662, 150);
             dataGridView1.TabIndex = 10;
+            // 
+            // numeropedido
+            // 
+            numeropedido.DataPropertyName = "numeropedido";
+            numeropedido.HeaderText = "numeropedido";
+            numeropedido.Name = "numeropedido";
             // 
             // fechaPedidoDataGridViewTextBoxColumn
             // 
@@ -236,7 +243,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 396);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -275,14 +282,15 @@
         private ComboBox comboBox1;
         private DataGridView dataGridView1;
         private BindingSource detallePedidoBindingSource;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private DataGridViewTextBoxColumn numeropedido;
         private DataGridViewTextBoxColumn fechaPedidoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn cantidadProductoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn precioProductoDataGridViewTextBoxColumn;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
     }
 }

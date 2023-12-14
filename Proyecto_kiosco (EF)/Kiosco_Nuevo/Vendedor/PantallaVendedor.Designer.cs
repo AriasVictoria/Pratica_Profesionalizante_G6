@@ -43,6 +43,7 @@
             numerolegajo = new DataGridViewTextBoxColumn();
             nombreVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoVendedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contrasenia = new DataGridViewTextBoxColumn();
             vendedorBindingSource = new BindingSource(components);
             vendedorBindingSource1 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -92,7 +93,7 @@
             button4.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Location = new Point(678, 279);
             button4.Name = "button4";
-            button4.Size = new Size(84, 30);
+            button4.Size = new Size(84, 32);
             button4.TabIndex = 4;
             button4.Text = "VOLVER";
             button4.UseVisualStyleBackColor = false;
@@ -150,7 +151,7 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { numerolegajo, nombreVendedorDataGridViewTextBoxColumn, apellidoVendedorDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { numerolegajo, nombreVendedorDataGridViewTextBoxColumn, apellidoVendedorDataGridViewTextBoxColumn, contrasenia });
             dataGridView1.DataSource = vendedorBindingSource;
             dataGridView1.Location = new Point(331, 40);
             dataGridView1.Name = "dataGridView1";
@@ -175,6 +176,12 @@
             apellidoVendedorDataGridViewTextBoxColumn.DataPropertyName = "ApellidoVendedor";
             apellidoVendedorDataGridViewTextBoxColumn.HeaderText = "ApellidoVendedor";
             apellidoVendedorDataGridViewTextBoxColumn.Name = "apellidoVendedorDataGridViewTextBoxColumn";
+            // 
+            // contrasenia
+            // 
+            contrasenia.DataPropertyName = "contrasenia";
+            contrasenia.HeaderText = "contrasenia";
+            contrasenia.Name = "contrasenia";
             // 
             // vendedorBindingSource
             // 
@@ -230,5 +237,6 @@
         private DataGridViewTextBoxColumn nombreVendedorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn apellidoVendedorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn contraseñaVDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contrasenia;
     }
 }

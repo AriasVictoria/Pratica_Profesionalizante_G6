@@ -49,8 +49,11 @@ namespace Back.Migrations
 
             modelBuilder.Entity("Back.DetallePedido", b =>
                 {
-                    b.Property<string>("codigo_barra")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("numeropedido")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("numeropedido"));
 
                     b.Property<int>("Cantidad_Producto")
                         .HasColumnType("int");
@@ -78,7 +81,7 @@ namespace Back.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("codigo_barra");
+                    b.HasKey("numeropedido");
 
                     b.HasIndex("Id1");
 
@@ -181,7 +184,7 @@ namespace Back.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("usuarios");
                 });
 
             modelBuilder.Entity("Back.Vendedores", b =>

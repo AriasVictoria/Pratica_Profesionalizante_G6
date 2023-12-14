@@ -91,6 +91,13 @@ namespace Back
                     tipo_producto = detalle.tipo_producto,
                 };
                 context.DetallePedidos.Add(NuevoDetallePedido);
+            }
+        }
+        public void AltaUsuario(Usuarios usuarios)
+        {
+            using (var context = new BaseDatos())
+            {
+                context.usuarios.Add(usuarios);
                 context.SaveChanges();
             }
         }
@@ -191,7 +198,6 @@ namespace Back
                 ModificarDetallePedido.tipo_producto = NuevoDetalle.tipo_producto;
 
                 context.DetallePedidos.Update(NuevoDetalle);
-                context.SaveChanges();
             }
 
         }

@@ -35,6 +35,7 @@
             proveedorToolStripMenuItem = new ToolStripMenuItem();
             pedidoToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
+            registraseToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             // mENÚToolStripMenuItem
             // 
-            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, administradorToolStripMenuItem, proveedorToolStripMenuItem, pedidoToolStripMenuItem });
+            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registraseToolStripMenuItem, vendedorToolStripMenuItem, administradorToolStripMenuItem, proveedorToolStripMenuItem, pedidoToolStripMenuItem });
             mENÚToolStripMenuItem.Font = new Font("Gill Sans Ultra Bold", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             mENÚToolStripMenuItem.ForeColor = Color.HotPink;
             mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
@@ -62,7 +63,7 @@
             vendedorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             vendedorToolStripMenuItem.ForeColor = Color.Black;
             vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            vendedorToolStripMenuItem.Size = new Size(161, 22);
+            vendedorToolStripMenuItem.Size = new Size(180, 22);
             vendedorToolStripMenuItem.Text = "Vendedor";
             vendedorToolStripMenuItem.Click += vendedorToolStripMenuItem_Click;
             // 
@@ -70,7 +71,7 @@
             // 
             administradorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            administradorToolStripMenuItem.Size = new Size(161, 22);
+            administradorToolStripMenuItem.Size = new Size(180, 22);
             administradorToolStripMenuItem.Text = "Administrador";
             administradorToolStripMenuItem.Click += administradorToolStripMenuItem_Click;
             // 
@@ -78,7 +79,7 @@
             // 
             proveedorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            proveedorToolStripMenuItem.Size = new Size(161, 22);
+            proveedorToolStripMenuItem.Size = new Size(180, 22);
             proveedorToolStripMenuItem.Text = "Proveedor";
             proveedorToolStripMenuItem.Click += proveedorToolStripMenuItem_Click;
             // 
@@ -86,7 +87,7 @@
             // 
             pedidoToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            pedidoToolStripMenuItem.Size = new Size(161, 22);
+            pedidoToolStripMenuItem.Size = new Size(180, 22);
             pedidoToolStripMenuItem.Text = "Detalle Pedido";
             pedidoToolStripMenuItem.Click += pedidoToolStripMenuItem_Click;
             // 
@@ -99,6 +100,14 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // registraseToolStripMenuItem
+            // 
+            registraseToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            registraseToolStripMenuItem.Name = "registraseToolStripMenuItem";
+            registraseToolStripMenuItem.Size = new Size(180, 22);
+            registraseToolStripMenuItem.Text = "Registrarse";
+            registraseToolStripMenuItem.Click += registraseToolStripMenuItem_Click;
             // 
             // MENU
             // 
@@ -127,5 +136,6 @@
         private ToolStripMenuItem proveedorToolStripMenuItem;
         private ToolStripMenuItem pedidoToolStripMenuItem;
         private PictureBox pictureBox1;
+        private ToolStripMenuItem registraseToolStripMenuItem;
     }
 }

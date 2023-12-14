@@ -14,28 +14,13 @@ namespace Back
         public string apellido { get; set; }
         public string contrasenia { get; set; }
         public string tipo { get; set; }
-
-        public static bool ValidarUsuario(string nombre, string apellido, string contrasenia, string tipo)
-        {
-            SqlConnection conn = new SqlConnection("Data Source=localhost;Initial Catalog=Kiosco_Base;Integrated Security=True");
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Usuarios WHERE Nombre=@Nombre AND Apellido=@Apellido AND Contrasena=@Contrasena AND TipoUsuario=@TipoUsuario", conn);
-            cmd.Parameters.AddWithValue("Nombre", nombre);
-            cmd.Parameters.AddWithValue("Apellido", apellido);
-            cmd.Parameters.AddWithValue("Contrasena", contrasenia);
-            cmd.Parameters.AddWithValue("TipoUsuario", tipo);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        public Usuarios(string nombre, string apellido, string contrasenia, string tipo) 
+        { 
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.contrasenia = contrasenia;
+            this.tipo = tipo;
         }
+
     }
 }

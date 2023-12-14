@@ -115,3 +115,4 @@ C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.genruntimeconfig.cache
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\ref\Kiosco_Nuevo.dll
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.DetallePedido.resources
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Registrarse.resources

@@ -54,40 +54,12 @@ namespace Kiosco_Nuevo
         {
 
         }
-        /*
-        private void ingresoUsuario_Click(object sender, EventArgs e)
+
+        private void registraseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var context = new BaseDatos())
-            {
-                var usuario = context.Usuarios.FirstOrDefault(u => u.nombre == textBoxnombre.Text, 
-                    u => u.apellido == textBoxApellido.Text);
-
-                if (usuario != null && usuario.contrasenia == textBoxContrasenia.Text)
-                {
-                    if (usuario.tipo == "vendedor")
-                    {
-                        PantallaVendedor form = new PantallaVendedor();
-                        form.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        PantallaAdministradores form = new PantallaAdministradores();
-                        form.Show();
-                        this.Hide();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("El usuario o contraseña son incorrectos");
-                }
-                textBoxNombre.Clear();
-                textBoxApellido.Clear();
-                textBoxContrasenia.Clear();
-            }
-
+            Registrarse ingresar = new Registrarse();
+            ingresar.Show();
+            this.Hide();
         }
-        */
-
     }
 }

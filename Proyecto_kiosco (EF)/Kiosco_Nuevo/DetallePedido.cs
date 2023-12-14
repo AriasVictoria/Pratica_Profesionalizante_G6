@@ -27,6 +27,7 @@ namespace Kiosco_Nuevo
             detalle.NombreProducto = textBox2.Text;
             detalle.Cantidad_Producto = int.Parse(textBox3.Text);
             detalle.Precio_Producto = int.Parse(textBox4.Text);
+            detalle.tipo_producto = comboBox1.Text;
 
             principal.AltaDetallePedido(detalle);
 
@@ -50,6 +51,7 @@ namespace Kiosco_Nuevo
             detalle.NombreProducto = textBox2.Text;
             detalle.Cantidad_Producto = int.Parse(textBox3.Text);
             detalle.Precio_Producto = int.Parse(textBox4.Text);
+            detalle.tipo_producto = comboBox1.Text;
 
             principal.ActualizarDetallePedido(detalle, seleccionado);
 
@@ -69,6 +71,7 @@ namespace Kiosco_Nuevo
 
                 dataGridView1.DataSource = detallep;
             }
+
         }
 
         private void DetallePedido_Load(object sender, EventArgs e)
@@ -76,7 +79,6 @@ namespace Kiosco_Nuevo
             using (var context = new BaseDatos())
             {
                 List<Back.DetallePedido> detallep = context.DetallePedidos.ToList();
-
                 dataGridView1.DataSource = detallep;
             }
         }

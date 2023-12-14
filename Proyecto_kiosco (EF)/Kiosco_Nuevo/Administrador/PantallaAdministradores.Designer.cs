@@ -43,8 +43,8 @@
             Id_Administrador = new DataGridViewTextBoxColumn();
             nombreAdministradorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             apellidoAdministradorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            contraseñaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             administradorBindingSource = new BindingSource(components);
+            contrasenia = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)administradorBindingSource).BeginInit();
             SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id_Administrador, nombreAdministradorDataGridViewTextBoxColumn, apellidoAdministradorDataGridViewTextBoxColumn, contraseñaDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id_Administrador, nombreAdministradorDataGridViewTextBoxColumn, apellidoAdministradorDataGridViewTextBoxColumn, contrasenia });
             dataGridView1.DataSource = administradorBindingSource;
             dataGridView1.Location = new Point(319, 35);
             dataGridView1.Name = "dataGridView1";
@@ -175,15 +175,15 @@
             apellidoAdministradorDataGridViewTextBoxColumn.HeaderText = "ApellidoAdministrador";
             apellidoAdministradorDataGridViewTextBoxColumn.Name = "apellidoAdministradorDataGridViewTextBoxColumn";
             // 
-            // contraseñaDataGridViewTextBoxColumn
-            // 
-            contraseñaDataGridViewTextBoxColumn.DataPropertyName = "contraseña";
-            contraseñaDataGridViewTextBoxColumn.HeaderText = "contraseña";
-            contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
-            // 
             // administradorBindingSource
             // 
             administradorBindingSource.DataSource = typeof(Back.Administradores);
+            // 
+            // contrasenia
+            // 
+            contrasenia.DataPropertyName = "contrasenia";
+            contrasenia.HeaderText = "contrasenia";
+            contrasenia.Name = "contrasenia";
             // 
             // PantallaAdministradores
             // 
@@ -228,5 +228,6 @@
         private DataGridViewTextBoxColumn nombreAdministradorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn apellidoAdministradorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contrasenia;
     }
 }
