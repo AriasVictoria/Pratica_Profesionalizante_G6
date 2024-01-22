@@ -9,15 +9,14 @@ namespace Back
 {
     public class DetallePedido
     {
-        public Pedidos Id { get; set; }
-        public Productos Id_Producto { get; set; }
+        public Productos Id { get; set; }
+        public Dueño NombreDuenio { get; set; }
         [Key]
         public int numeropedido { get; set; }
         public string NombreProducto { get; set; }
         public string tipo_producto { get; set; }
         public int Cantidad_Producto { get; set; }
         public int Precio_Producto { get; set; }
-        public int MontoFinal { get; set; }
         public DateTime Fecha_Pedido { get; set; }
 
 

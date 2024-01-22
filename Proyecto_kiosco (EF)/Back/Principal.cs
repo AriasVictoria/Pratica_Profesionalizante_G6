@@ -5,44 +5,17 @@ namespace Back
 {
     public class Principal
     {
-        public void AltaAdmnistradores(Administradores administrador)
+        public void AltaDueño (Dueño dueño)
         {
             using (var context = new BaseDatos())
             {
-                var NuevoAdmnistrador = new Administradores
+                var NuevoDueño = new Dueño
                 {
-                    NombreAdministrador = administrador.NombreAdministrador,
-                    ApellidoAdministrador = administrador.ApellidoAdministrador,
-                    contrasenia = administrador.contrasenia,
+                    NombreDuenio = dueño.NombreDuenio,
+                    ApellidoDuenio = dueño.ApellidoDuenio,
+                    Contrasenia = dueño.Contrasenia,
                 };
-                context.Administradores.Add(NuevoAdmnistrador);
-                context.SaveChanges();
-            }
-        }
-        public void AltaVendedor(Vendedores vendedor)
-        {
-            using (var context = new BaseDatos())
-            {
-                var NuevoVendedor = new Vendedores
-                {
-                    NombreVendedor = vendedor.NombreVendedor,
-                    ApellidoVendedor = vendedor.ApellidoVendedor,
-                    contrasenia = vendedor.contrasenia,
-                };
-                context.Vendedores.Add(NuevoVendedor);
-                context.SaveChanges();
-            }
-        }
-        
-        public void AltaPedido(Pedidos pedido)
-        {
-            using (var context = new BaseDatos())
-            {
-                var NuevoPedido = new Pedidos
-                {
-                    NombreVendedor = pedido.NombreVendedor,
-                };
-                context.Pedidos.Add(NuevoPedido);
+                context.Dueños.Add(NuevoDueño);
                 context.SaveChanges();
             }
         }
@@ -93,11 +66,11 @@ namespace Back
                 context.DetallePedidos.Add(NuevoDetallePedido);
             }
         }
-        public void AltaUsuario(Usuarios usuarios)
+        public void EliminarDueño(Dueño dueño)
         {
             using (var context = new BaseDatos())
             {
-                context.usuarios.Add(usuarios);
+                context.Dueños.Remove(dueño);
                 context.SaveChanges();
             }
         }
@@ -109,22 +82,7 @@ namespace Back
                 context.SaveChanges();
             }
         }
-        public void EliminarAdministrador(Administradores administrador2)
-        {
-            using (var context = new BaseDatos())
-            {
-                context.Administradores.Remove(administrador2);
-                context.SaveChanges();
-            }
-        }
-        public void EliminarPedido(Pedidos pedido)
-        {
-            using (var context = new BaseDatos())
-            {
-                context.Pedidos.Remove(pedido);
-                context.SaveChanges();
-            }
-        }
+        
         public void EliminarProducto(Productos producto)
         {
             using (var context = new BaseDatos())
@@ -141,48 +99,7 @@ namespace Back
                 context.SaveChanges();
             }
         }
-        public void EliminarVendedor(Vendedores vendedor)
-        {
-            using (var context = new BaseDatos())
-            {
-                context.Vendedores.Remove(vendedor);
-                context.SaveChanges();
-
-
-            }
-        }
-        public void ActucalizarAdministrador(Administradores Nuevoadministrador, Administradores seleccionado)
-        {
-            using (var context = new BaseDatos())
-            {
-                Administradores ModificarAdministrador = new Administradores();
-
-                Administradores administrador1 = new Administradores();
-                //ModificarAdministrador.Id_Administrador = Nuevoadministrador.Id_Administrador;
-                ModificarAdministrador.NombreAdministrador = Nuevoadministrador.NombreAdministrador;
-                ModificarAdministrador.ApellidoAdministrador = Nuevoadministrador.ApellidoAdministrador;
-                ModificarAdministrador.contrasenia = Nuevoadministrador.contrasenia;
-
-                context.Administradores.Update(Nuevoadministrador);
-                context.SaveChanges();
-
-            }
-        }
-        public void ActucalizarPedido(Pedidos NuevoPedido, Pedidos seleccionado)
-        {
-            using (var context = new BaseDatos())
-            {
-                Pedidos ModificarPedido = new Pedidos();
-
-                Pedidos pedido1 = new Pedidos();
-
-                ModificarPedido.NombreVendedor = NuevoPedido.NombreVendedor;
-
-                context.Pedidos.Update(NuevoPedido);
-                context.SaveChanges(); 
-            }
-
-        }
+        
         public void ActualizarDetallePedido(DetallePedido NuevoDetalle, DetallePedido seleccionado)
         {
             using (var context = new BaseDatos())
@@ -199,7 +116,6 @@ namespace Back
 
                 context.DetallePedidos.Update(NuevoDetalle);
             }
-
         }
         public void ActucalizarProducto(Productos NuevoProducto, Productos seleccionado)
         {
@@ -234,24 +150,27 @@ namespace Back
 
             }
         }
-        public void ActucalizarVendedor(Vendedores NuevoVendedor, Vendedores seleccionado)
+        public void ActualizarDueño(Dueño NuevoDueño, Dueño seleccionado)
         {
             using (var context = new BaseDatos())
             {
-                Vendedores ModificarVendedor = new Vendedores();
+                Dueño ModificarDueño = new Dueño();
 
-                Vendedores vendedor1 = new Vendedores();
+                Dueño dueño = new Dueño();
 
-                ModificarVendedor.NombreVendedor = NuevoVendedor.NombreVendedor;
-                ModificarVendedor.ApellidoVendedor = NuevoVendedor.ApellidoVendedor;
-                ModificarVendedor.contrasenia = NuevoVendedor.contrasenia;
-                //numerolegajo = NuevoVendedor.numerolegajo;
+                ModificarDueño.DNI = NuevoDueño.DNI;
+                ModificarDueño.NombreDuenio = NuevoDueño.NombreDuenio;
+                ModificarDueño.ApellidoDuenio = NuevoDueño.ApellidoDuenio;
+                ModificarDueño.Contrasenia = NuevoDueño.Contrasenia;
 
-                context.Vendedores.Update(NuevoVendedor);
-                context.SaveChanges();
+                context.Dueños.Update(NuevoDueño);
             }
         }
-       // devuelve toda la lista de prod
+
+
+        // devuelve toda la lista de pro
+        //
+        /*
         public List<Productos> ObtenerProducto()
         {
             using (var context = new BaseDatos())
@@ -259,6 +178,14 @@ namespace Back
                 return context.Productos.ToList();
             }
         }
-
+        */
+        public List<Dueño> MostrarDueñio()
+        {
+            using (var context = new BaseDatos())
+            {
+                var ListaDueño = context.Dueños.ToList();
+                return ListaDueño;
+            }
+        }
     }
 }

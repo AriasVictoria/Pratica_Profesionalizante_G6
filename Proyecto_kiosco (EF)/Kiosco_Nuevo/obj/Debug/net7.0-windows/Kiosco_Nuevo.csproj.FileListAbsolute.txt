@@ -55,11 +55,9 @@ C:\Users\Vicky\source\repos\Proyecto_kiosco\Kiosco_Nuevo\obj\Debug\net7.0-window
 C:\Users\Vicky\source\repos\Proyecto_kiosco\Kiosco_Nuevo\obj\Debug\net7.0-windows\ref\Kiosco_Nuevo.dll
 C:\Users\Vicky\source\repos\Proyecto_kiosco\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.MENU.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.csproj.AssemblyReference.cache
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Administrador.PantallaAdministradores.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.MENU.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Properties.Resources.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Proveedor.PProveedor.resources
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Vendedor.PantallaVendedor.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.csproj.GenerateResource.cache
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.AssemblyInfoInputs.cache
@@ -116,3 +114,4 @@ C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\ref\Kiosco_Nuevo.dll
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.DetallePedido.resources
 C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.Registrarse.resources
+C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_kiosco (EF)\Kiosco_Nuevo\obj\Debug\net7.0-windows\Kiosco_Nuevo.LoginUsuario.IngresarUsuario.resources

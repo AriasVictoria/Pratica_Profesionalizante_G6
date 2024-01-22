@@ -22,31 +22,6 @@ namespace Back.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Back.Administradores", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ApellidoAdministrador")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NombreAdministrador")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("contrasenia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Administradores");
-                });
-
             modelBuilder.Entity("Back.DetallePedido", b =>
                 {
                     b.Property<int>("numeropedido")
@@ -64,10 +39,7 @@ namespace Back.Migrations
                     b.Property<int>("Id1")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id_Producto1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MontoFinal")
+                    b.Property<int>("NombreDuenioDNI")
                         .HasColumnType("int");
 
                     b.Property<string>("NombreProducto")
@@ -85,36 +57,42 @@ namespace Back.Migrations
 
                     b.HasIndex("Id1");
 
-                    b.HasIndex("Id_Producto1");
+                    b.HasIndex("NombreDuenioDNI");
 
                     b.ToTable("DetallePedidos");
                 });
 
-            modelBuilder.Entity("Back.Pedidos", b =>
+            modelBuilder.Entity("Back.Dueño", b =>
+                {
+                    b.Property<int>("DNI")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DNI"));
+
+                    b.Property<string>("ApellidoDuenio")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Contrasenia")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NombreDuenio")
+                        .HasColumnType("int");
+
+                    b.HasKey("DNI");
+
+                    b.ToTable("Dueños");
+                });
+
+            modelBuilder.Entity("Back.Productos", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("NombreVendedornumerolegajo")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NombreVendedornumerolegajo");
-
-                    b.ToTable("Pedidos");
-                });
-
-            modelBuilder.Entity("Back.Productos", b =>
-                {
-                    b.Property<int>("Id_Producto")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Producto"));
 
                     b.Property<string>("NombreProducto")
                         .IsRequired()
@@ -130,7 +108,7 @@ namespace Back.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id_Producto");
+                    b.HasKey("Id");
 
                     b.HasIndex("NombreProvedorId");
 
@@ -161,85 +139,23 @@ namespace Back.Migrations
                     b.ToTable("proveedores");
                 });
 
-            modelBuilder.Entity("Back.Usuarios", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("apellido")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("contrasenia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tipo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("usuarios");
-                });
-
-            modelBuilder.Entity("Back.Vendedores", b =>
-                {
-                    b.Property<int>("numerolegajo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("numerolegajo"));
-
-                    b.Property<string>("ApellidoVendedor")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NombreVendedor")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("contrasenia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("numerolegajo");
-
-                    b.ToTable("Vendedores");
-                });
-
             modelBuilder.Entity("Back.DetallePedido", b =>
                 {
-                    b.HasOne("Back.Pedidos", "Id")
+                    b.HasOne("Back.Productos", "Id")
                         .WithMany()
                         .HasForeignKey("Id1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Back.Productos", "Id_Producto")
+                    b.HasOne("Back.Dueño", "NombreDuenio")
                         .WithMany()
-                        .HasForeignKey("Id_Producto1")
+                        .HasForeignKey("NombreDuenioDNI")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Id");
 
-                    b.Navigation("Id_Producto");
-                });
-
-            modelBuilder.Entity("Back.Pedidos", b =>
-                {
-                    b.HasOne("Back.Vendedores", "NombreVendedor")
-                        .WithMany()
-                        .HasForeignKey("NombreVendedornumerolegajo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("NombreVendedor");
+                    b.Navigation("NombreDuenio");
                 });
 
             modelBuilder.Entity("Back.Productos", b =>

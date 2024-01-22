@@ -1,7 +1,6 @@
 using Back;
-using Kiosco_Nuevo.Administrador;
+using Kiosco_Nuevo.LoginUsuario;
 using Kiosco_Nuevo.Proveedor;
-using Kiosco_Nuevo.Vendedor;
 
 namespace Kiosco_Nuevo
 {
@@ -14,16 +13,12 @@ namespace Kiosco_Nuevo
 
         private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PantallaVendedor vendedor = new PantallaVendedor();
-            vendedor.Show();
-            this.Hide();
+            
         }
 
         private void administradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PantallaAdministradores admnistrador = new PantallaAdministradores();
-            admnistrador.Show();
-            this.Hide();
+            
         }
 
         private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,7 +52,7 @@ namespace Kiosco_Nuevo
 
         private void registraseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Registrarse ingresar = new Registrarse();
+            IngresarUsuario ingresar = new IngresarUsuario();
             ingresar.Show();
             this.Hide();
         }

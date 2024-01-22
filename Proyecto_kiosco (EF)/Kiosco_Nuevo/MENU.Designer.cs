@@ -30,12 +30,12 @@
         {
             menuStrip1 = new MenuStrip();
             mENÚToolStripMenuItem = new ToolStripMenuItem();
+            registraseToolStripMenuItem = new ToolStripMenuItem();
             vendedorToolStripMenuItem = new ToolStripMenuItem();
             administradorToolStripMenuItem = new ToolStripMenuItem();
             proveedorToolStripMenuItem = new ToolStripMenuItem();
             pedidoToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
-            registraseToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -57,6 +57,14 @@
             mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             mENÚToolStripMenuItem.Size = new Size(84, 29);
             mENÚToolStripMenuItem.Text = "MENÚ";
+            // 
+            // registraseToolStripMenuItem
+            // 
+            registraseToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            registraseToolStripMenuItem.Name = "registraseToolStripMenuItem";
+            registraseToolStripMenuItem.Size = new Size(180, 22);
+            registraseToolStripMenuItem.Text = "Ingresar Usuario";
+            registraseToolStripMenuItem.Click += registraseToolStripMenuItem_Click;
             // 
             // vendedorToolStripMenuItem
             // 
@@ -100,14 +108,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            // 
-            // registraseToolStripMenuItem
-            // 
-            registraseToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            registraseToolStripMenuItem.Name = "registraseToolStripMenuItem";
-            registraseToolStripMenuItem.Size = new Size(180, 22);
-            registraseToolStripMenuItem.Text = "Registrarse";
-            registraseToolStripMenuItem.Click += registraseToolStripMenuItem_Click;
             // 
             // MENU
             // 

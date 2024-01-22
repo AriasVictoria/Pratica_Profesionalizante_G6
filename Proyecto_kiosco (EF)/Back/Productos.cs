@@ -10,8 +10,7 @@ namespace Back
 {
     public class Productos
     {
-        [Key]
-        public int Id_Producto { get; set; }
+        public int Id { get; set; }
         public string NombreProducto { get; set; }
         public int stock { get; set; }
         public Proveedores NombreProvedor { get; set; }

@@ -13,10 +13,6 @@ namespace Back
         public int cuit { get; set; }
         public string NombreProvedor { get; set; }
         public string ApellidoProvedor { get; set; }
-        /*public string PV
-        {
-            get { return ", nombre: " + NombreProvedor + ", Apellido: " + ApellidoProvedor; }
-        }
-        */
+        
     }
 }
