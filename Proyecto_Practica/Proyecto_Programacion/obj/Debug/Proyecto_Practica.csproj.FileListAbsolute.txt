@@ -1,4 +1,0 @@
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Practica\Proyecto_Programacion\obj\Debug\Proyecto_Practica.csproj.AssemblyReference.cache
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Practica\Proyecto_Programacion\obj\Debug\Proyecto_Practica.csproj.CoreCompileInputs.cache
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Practica\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.dll
-C:\Users\Vicky\OneDrive\Documentos\GitHub\Pratica_Profesionalizante_G6\Proyecto_Practica\Proyecto_Programacion\obj\Debug\Proyecto_Programacion.pdb

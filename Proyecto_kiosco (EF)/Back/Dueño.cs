@@ -9,7 +9,7 @@ namespace Back
 {
     public class Dueño
     {
-        [Key]
+        public int ID { get; set; }
         public int DNI { get; set; }
         public int NombreDuenio { get; set; }
         public string ApellidoDuenio { get; set; }

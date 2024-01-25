@@ -1,0 +1,14 @@
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.csproj.AssemblyReference.cache
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.AssemblyInfoInputs.cache
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.AssemblyInfo.cs
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.csproj.CoreCompileInputs.cache
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\bin\Debug\net7.0\Kiosco_Candy.deps.json
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\bin\Debug\net7.0\Kiosco_Candy.runtimeconfig.json
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\bin\Debug\net7.0\Kiosco_Candy.dll
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\bin\Debug\net7.0\Kiosco_Candy.pdb
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.dll
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\refint\Kiosco_Candy.dll
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.pdb
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\Kiosco_Candy.genruntimeconfig.cache
+C:\Users\Vicky\source\repos\Sistema_Kiosco\Kiosco_Candy\obj\Debug\net7.0\ref\Kiosco_Candy.dll

@@ -31,11 +31,10 @@
             menuStrip1 = new MenuStrip();
             mENÚToolStripMenuItem = new ToolStripMenuItem();
             registraseToolStripMenuItem = new ToolStripMenuItem();
-            vendedorToolStripMenuItem = new ToolStripMenuItem();
-            administradorToolStripMenuItem = new ToolStripMenuItem();
             proveedorToolStripMenuItem = new ToolStripMenuItem();
             pedidoToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
+            productosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -51,7 +50,7 @@
             // 
             // mENÚToolStripMenuItem
             // 
-            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registraseToolStripMenuItem, vendedorToolStripMenuItem, administradorToolStripMenuItem, proveedorToolStripMenuItem, pedidoToolStripMenuItem });
+            mENÚToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registraseToolStripMenuItem, productosToolStripMenuItem, proveedorToolStripMenuItem, pedidoToolStripMenuItem });
             mENÚToolStripMenuItem.Font = new Font("Gill Sans Ultra Bold", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             mENÚToolStripMenuItem.ForeColor = Color.HotPink;
             mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
@@ -65,23 +64,6 @@
             registraseToolStripMenuItem.Size = new Size(180, 22);
             registraseToolStripMenuItem.Text = "Ingresar Usuario";
             registraseToolStripMenuItem.Click += registraseToolStripMenuItem_Click;
-            // 
-            // vendedorToolStripMenuItem
-            // 
-            vendedorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            vendedorToolStripMenuItem.ForeColor = Color.Black;
-            vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            vendedorToolStripMenuItem.Size = new Size(180, 22);
-            vendedorToolStripMenuItem.Text = "Vendedor";
-            vendedorToolStripMenuItem.Click += vendedorToolStripMenuItem_Click;
-            // 
-            // administradorToolStripMenuItem
-            // 
-            administradorToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            administradorToolStripMenuItem.Size = new Size(180, 22);
-            administradorToolStripMenuItem.Text = "Administrador";
-            administradorToolStripMenuItem.Click += administradorToolStripMenuItem_Click;
             // 
             // proveedorToolStripMenuItem
             // 
@@ -109,6 +91,13 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // productosToolStripMenuItem
+            // 
+            productosToolStripMenuItem.Font = new Font("Palatino Linotype", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            productosToolStripMenuItem.Size = new Size(180, 22);
+            productosToolStripMenuItem.Text = "Productos";
+            // 
             // MENU
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -131,11 +120,10 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem mENÚToolStripMenuItem;
-        private ToolStripMenuItem vendedorToolStripMenuItem;
-        private ToolStripMenuItem administradorToolStripMenuItem;
         private ToolStripMenuItem proveedorToolStripMenuItem;
         private ToolStripMenuItem pedidoToolStripMenuItem;
         private PictureBox pictureBox1;
         private ToolStripMenuItem registraseToolStripMenuItem;
+        private ToolStripMenuItem productosToolStripMenuItem;
     }
 }

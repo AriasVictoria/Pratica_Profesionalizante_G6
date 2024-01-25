@@ -48,6 +48,7 @@
             label1.Size = new Size(93, 15);
             label1.TabIndex = 0;
             label1.Text = "Nombre usuario";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -57,6 +58,7 @@
             label2.Size = new Size(93, 15);
             label2.TabIndex = 1;
             label2.Text = "Apellido usuario";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -66,6 +68,7 @@
             label3.Size = new Size(88, 15);
             label3.TabIndex = 3;
             label3.Text = "Tipo de usuario";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -75,6 +78,7 @@
             label4.Size = new Size(109, 15);
             label4.TabIndex = 2;
             label4.Text = "Contraseña usuario";
+            label4.Click += label4_Click;
             // 
             // textBox1
             // 
@@ -82,6 +86,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 4;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -89,6 +94,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 5;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -96,6 +102,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 6;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 
@@ -103,6 +110,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 7;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // button1
             // 

@@ -39,7 +39,7 @@ namespace Back.Migrations
                     b.Property<int>("Id1")
                         .HasColumnType("int");
 
-                    b.Property<int>("NombreDuenioDNI")
+                    b.Property<int>("NombreDuenioID")
                         .HasColumnType("int");
 
                     b.Property<string>("NombreProducto")
@@ -57,18 +57,18 @@ namespace Back.Migrations
 
                     b.HasIndex("Id1");
 
-                    b.HasIndex("NombreDuenioDNI");
+                    b.HasIndex("NombreDuenioID");
 
                     b.ToTable("DetallePedidos");
                 });
 
             modelBuilder.Entity("Back.Dueño", b =>
                 {
-                    b.Property<int>("DNI")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DNI"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("ApellidoDuenio")
                         .IsRequired()
@@ -78,10 +78,13 @@ namespace Back.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("DNI")
+                        .HasColumnType("int");
+
                     b.Property<int>("NombreDuenio")
                         .HasColumnType("int");
 
-                    b.HasKey("DNI");
+                    b.HasKey("ID");
 
                     b.ToTable("Dueños");
                 });
@@ -149,7 +152,7 @@ namespace Back.Migrations
 
                     b.HasOne("Back.Dueño", "NombreDuenio")
                         .WithMany()
-                        .HasForeignKey("NombreDuenioDNI")
+                        .HasForeignKey("NombreDuenioID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

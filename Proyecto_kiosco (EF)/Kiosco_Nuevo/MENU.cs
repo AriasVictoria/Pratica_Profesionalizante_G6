@@ -13,12 +13,12 @@ namespace Kiosco_Nuevo
 
         private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void administradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
