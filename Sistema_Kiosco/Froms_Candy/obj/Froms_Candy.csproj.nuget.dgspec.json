@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj": {}
+    "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj": {
+    "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj",
+        "projectUniqueName": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj",
         "projectName": "Froms_Candy",
-        "projectPath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj",
+        "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Froms_Candy\\Froms_Candy.csproj",
         "packagesPath": "C:\\Users\\Vicky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Froms_Candy\\obj\\",
+        "outputPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Froms_Candy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj": {
-                "projectPath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj"
+              "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj": {
+                "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj": {
+    "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
+        "projectUniqueName": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
         "projectName": "Kiosco_Candy",
-        "projectPath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
+        "projectPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
         "packagesPath": "C:\\Users\\Vicky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\obj\\",
+        "outputPath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

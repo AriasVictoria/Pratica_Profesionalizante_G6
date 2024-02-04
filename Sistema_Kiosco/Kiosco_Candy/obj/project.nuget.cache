@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G7lCV/FEHnNBWpaO3WAQdVkW5bhDRmq/3aIIlMxXAguxIRaej3id9IzYmfReby8bdXbWfBM6iF9r0k3WJ8H+ow==",
+  "dgSpecHash": "6f/AC3WHJURked/hawskbMj8jrfz5GX/9re9FlUd1r5f8CEwEDblp2FYz4OMid9eDm5kqKT43lZ1CnKXoGb4ZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vicky\\source\\repos\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
+  "projectFilePath": "C:\\Users\\Vicky\\OneDrive\\Documentos\\GitHub\\Pratica_Profesionalizante_G6\\Sistema_Kiosco\\Kiosco_Candy\\Kiosco_Candy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vicky\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Vicky\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
