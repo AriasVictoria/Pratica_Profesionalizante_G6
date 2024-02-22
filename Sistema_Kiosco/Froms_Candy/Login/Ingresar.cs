@@ -39,6 +39,32 @@ namespace Froms_Candy
         {
             using (var context = new BaseDeDatos())
             {
+                string UsuarioIngresado = textBox1.Text;
+                string ContraseniaIngresada = textBox3.Text;
+
+                Dueño? Dueñoencontrador = context.Dueños.FirstOrDefault(a => a.NombreDuenio == UsuarioIngresado);
+                if (Dueñoencontrador != null)
+                {
+                    if (ContraseniaIngresada == Dueñoencontrador.Contrasenia)
+                    {
+                        Pantalla_Usuario dueño = new Pantalla_Usuario();
+                        dueño.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos incorrectos, intente nuevamente");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos, intente nuevamente");
+                }
+            }
+            
+            /*
+            using (var context = new BaseDeDatos())
+            {
                 var usuario = context.Dueños.FirstOrDefault(u => u.DNI == int.Parse(textBox4.Text));
 
                 if (usuario != null && usuario.Contrasenia == textBox3.Text)
@@ -56,6 +82,7 @@ namespace Froms_Candy
                 textBox4.Clear();
                 textBox3.Clear();
             }
+            */
         }
     }
 }

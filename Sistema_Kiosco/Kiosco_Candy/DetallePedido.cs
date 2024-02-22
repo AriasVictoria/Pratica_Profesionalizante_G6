@@ -17,6 +17,7 @@ namespace Kiosco_Candy
         public string tipo_producto { get; set; }
         public int Cantidad_Producto { get; set; }
         public int Precio_Producto { get; set; }
+        public int MontoFinal { get; set; }
         public DateTime Fecha_Pedido { get; set; }
     }
 }

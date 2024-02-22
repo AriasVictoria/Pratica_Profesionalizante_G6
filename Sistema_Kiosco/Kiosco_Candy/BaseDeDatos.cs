@@ -16,7 +16,7 @@ namespace Kiosco_Candy
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=VARIAS\\SQLEXPRESS;database=Kiosco;trusted_connection=true;Encrypt=False");
+            optionsBuilder.UseSqlServer("server=VARIAS\\SQLEXPRESS;database=Sistema_Kiosco;trusted_connection=true;Encrypt=False");
         }
 
     }

@@ -133,7 +133,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(188, 69);
+            label6.Location = new Point(188, 68);
             label6.Name = "label6";
             label6.Size = new Size(93, 15);
             label6.TabIndex = 13;
@@ -171,6 +171,7 @@
             Controls.Add(label1);
             Name = "Registrarse";
             Text = "Registrarse";
+            Load += Registrarse_Load;
             ResumeLayout(false);
             PerformLayout();
         }

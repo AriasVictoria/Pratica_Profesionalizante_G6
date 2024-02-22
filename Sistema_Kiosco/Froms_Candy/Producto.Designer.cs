@@ -188,6 +188,7 @@
             button3.TabIndex = 54;
             button3.Text = "ALTA";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -211,6 +212,7 @@
             button1.TabIndex = 52;
             button1.Text = "MODIFICAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button4
             // 
@@ -222,6 +224,7 @@
             button4.TabIndex = 51;
             button4.Text = "BAJA";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // Producto
             // 
@@ -246,6 +249,7 @@
             Controls.Add(label1);
             Name = "Producto";
             Text = "Producto";
+            Load += Producto_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productosBindingSource).EndInit();
             ResumeLayout(false);

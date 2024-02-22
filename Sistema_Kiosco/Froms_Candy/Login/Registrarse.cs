@@ -21,26 +21,37 @@ namespace Froms_Candy.Login
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             using (var context = new BaseDeDatos())
             {
-                Dueño dueño = new Dueño();
 
-                dueño.DNI = int.Parse(textBox4.Text);
-                dueño.NombreDuenio = textBox1.Text;
-                dueño.ApellidoDuenio = textBox2.Text;
-                dueño.Contrasenia = textBox3.Text;
+                string usuarioIngresado = textBox1.Text;
+                Dueño? usuarioEncontrado = context.Dueños.FirstOrDefault(c => c.NombreDuenio == usuarioIngresado);
+                if (usuarioEncontrado == null)
+                {
+                    Dueño dueño = new Dueño();
 
-                principal.AltaDueño(dueño);
+                    dueño.DNI = int.Parse(textBox4.Text);
+                    dueño.NombreDuenio = textBox1.Text;
+                    dueño.ApellidoDuenio = textBox2.Text;
+                    dueño.Contrasenia = textBox3.Text;
 
-                MessageBox.Show("Usuario registrado con exito");
+                    principal.AltaDueño(dueño);
+
+                    MessageBox.Show("Se ha registrado con éxito");
+
+                }
+                else
+                {
+                    MessageBox.Show("El nombre de usuario ya existe, intente con otro");
+                }
 
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
                 textBox4.Clear();
-
-                context.SaveChanges();
             }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -48,6 +59,11 @@ namespace Froms_Candy.Login
             Ingresar usuario = new Ingresar();
             usuario.Show();
             this.Hide();
+        }
+
+        private void Registrarse_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

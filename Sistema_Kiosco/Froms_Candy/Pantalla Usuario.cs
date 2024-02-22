@@ -49,14 +49,14 @@ namespace Froms_Candy
         {
             Dueño seleccionado = (Dueño)dataGridView1.CurrentRow.DataBoundItem;
 
-            Dueño dueño = new Dueño();
+            Dueño duenio = new Dueño();
 
-            dueño.DNI = seleccionado.DNI;
-            dueño.NombreDuenio = textBox1.Text;
-            dueño.ApellidoDuenio = textBox2.Text;
-            dueño.Contrasenia = textBox3.Text;
+            duenio.DNI = int.Parse(textBox1.Text);
+            duenio.NombreDuenio = textBox2.Text;
+            duenio.ApellidoDuenio = textBox3.Text;
+            duenio.Contrasenia = textBox4.Text;
 
-            principal.ActualizarDueño(dueño, seleccionado);
+            principal.ActualizarDueño(duenio, seleccionado);
 
             textBox1.Clear();
             textBox2.Clear();
@@ -78,7 +78,11 @@ namespace Froms_Candy
 
         private void Pantalla_Usuario_Load(object sender, EventArgs e)
         {
-
+            using (var context = new BaseDeDatos())
+            {
+                List<Dueño> dueño1 = context.Dueños.ToList();
+                dataGridView1.DataSource = dueño1;
+            }
         }
     }
 }

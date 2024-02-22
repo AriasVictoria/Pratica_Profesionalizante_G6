@@ -4,6 +4,7 @@ using Kiosco_Candy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KioscoCandy.Migrations
 {
     [DbContext(typeof(BaseDeDatos))]
-    partial class BaseDeDatosModelSnapshot : ModelSnapshot
+    [Migration("20240221212307_kiosco4")]
+    partial class kiosco4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,9 +40,6 @@ namespace KioscoCandy.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Id1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MontoFinal")
                         .HasColumnType("int");
 
                     b.Property<int>("NombreDuenioID")

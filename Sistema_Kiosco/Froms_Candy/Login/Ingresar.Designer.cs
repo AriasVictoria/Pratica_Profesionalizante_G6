@@ -33,14 +33,14 @@
             button4 = new Button();
             button1 = new Button();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label4 = new Label();
-            label3 = new Label();
-            label5 = new Label();
             linkLabel1 = new LinkLabel();
             label6 = new Label();
             textBox4 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label2
@@ -90,51 +90,19 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(349, 198);
+            textBox3.Location = new Point(372, 188);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 21;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(349, 137);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 20;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(349, 85);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 19;
-            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(207, 198);
+            label4.Location = new Point(230, 188);
             label4.Name = "label4";
             label4.Size = new Size(109, 15);
             label4.TabIndex = 18;
             label4.Text = "Contraseña usuario";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(207, 145);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 15);
-            label3.TabIndex = 17;
-            label3.Text = "Apellido usuario";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(207, 93);
-            label5.Name = "label5";
-            label5.Size = new Size(93, 15);
-            label5.TabIndex = 16;
-            label5.Text = "Nombre usuario";
             // 
             // linkLabel1
             // 
@@ -150,7 +118,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(207, 42);
+            label6.Location = new Point(230, 37);
             label6.Name = "label6";
             label6.Size = new Size(25, 15);
             label6.TabIndex = 25;
@@ -158,10 +126,42 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(349, 34);
+            textBox4.Location = new Point(372, 29);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 26;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(372, 131);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 30;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(372, 79);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 29;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(230, 139);
+            label5.Name = "label5";
+            label5.Size = new Size(93, 15);
+            label5.TabIndex = 28;
+            label5.Text = "Apellido usuario";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(230, 86);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 15);
+            label3.TabIndex = 27;
+            label3.Text = "Nombre usuario";
             // 
             // Ingresar
             // 
@@ -169,17 +169,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(label3);
             Controls.Add(textBox4);
             Controls.Add(label6);
             Controls.Add(linkLabel1);
             Controls.Add(button4);
             Controls.Add(button1);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Ingresar";
@@ -195,13 +195,13 @@
         private Button button4;
         private Button button1;
         private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private Label label4;
-        private Label label3;
-        private Label label5;
         private LinkLabel linkLabel1;
         private Label label6;
         private TextBox textBox4;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label5;
+        private Label label3;
     }
 }

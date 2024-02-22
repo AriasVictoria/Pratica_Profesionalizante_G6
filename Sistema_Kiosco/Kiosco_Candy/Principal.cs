@@ -17,7 +17,7 @@
                 context.SaveChanges();
             }
         }
-        public void AltaProducto(Productos producto)
+        public void AltaProductos(Productos producto)
         {
             using (var context = new BaseDeDatos())
             {
@@ -28,9 +28,8 @@
                     tipo_producto = producto.tipo_producto,
                     NombreProvedor = producto.NombreProvedor,
                 };
-                context.Productos.Add(NuevoProducto);
                 context.SaveChanges();
-
+                context.Productos.Add(NuevoProducto);
             }
         }
         public void AltaProveedor(Proveedor proveedor)
@@ -43,9 +42,9 @@
                     NombreProvedor = proveedor.NombreProvedor,
                     ApellidoProvedor = proveedor.ApellidoProvedor,
                 };
-                context.Proveedor.Add(NuevoProveedor);
                 context.SaveChanges();
 
+                context.Proveedor.Add(NuevoProveedor);
             }
         }
         public void AltaDetallePedido(DetallePedido detalle)
@@ -55,11 +54,13 @@
                 var NuevoDetallePedido = new DetallePedido
                 {
                     Cantidad_Producto = detalle.Cantidad_Producto,
-                    Precio_Producto = detalle.Precio_Producto,
+                    MontoFinal = detalle.MontoFinal,
                     Fecha_Pedido = detalle.Fecha_Pedido,
                     NombreProducto = detalle.NombreProducto,
                     tipo_producto = detalle.tipo_producto,
+                    Precio_Producto = detalle.Precio_Producto,
                 };
+                context.SaveChanges();
                 context.DetallePedidos.Add(NuevoDetallePedido);
             }
         }
@@ -105,7 +106,8 @@
                 DetallePedido detalle1 = new DetallePedido();
 
                 ModificarDetallePedido.Cantidad_Producto = NuevoDetalle.Cantidad_Producto;
-                ModificarDetallePedido.Precio_Producto = NuevoDetalle.Precio_Producto;
+                ModificarDetallePedido.MontoFinal = NuevoDetalle.MontoFinal;
+                ModificarDetallePedido.Precio_Producto = NuevoDetalle.Precio_Producto; 
                 ModificarDetallePedido.Fecha_Pedido = NuevoDetalle.Fecha_Pedido;
                 ModificarDetallePedido.NombreProducto = NuevoDetalle.NombreProducto;
                 ModificarDetallePedido.tipo_producto = NuevoDetalle.tipo_producto;
@@ -159,5 +161,14 @@
                 context.Dueños.Update(NuevoDueño);
             }
         }
+        public List<Dueño> MostrarUsuarios()
+        {
+            using (var context = new BaseDeDatos())
+            {
+                return context.Dueños.ToList();
+            }
+        }
+        
     }
+    
 }

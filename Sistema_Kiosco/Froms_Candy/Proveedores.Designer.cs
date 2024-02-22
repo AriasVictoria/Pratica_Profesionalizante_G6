@@ -175,6 +175,7 @@
             button1.TabIndex = 48;
             button1.Text = "MODIFICAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button4
             // 
@@ -186,6 +187,7 @@
             button4.TabIndex = 47;
             button4.Text = "BAJA";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -220,6 +222,7 @@
             Controls.Add(label6);
             Name = "Proveedores";
             Text = "Proveedores";
+            Load += Proveedores_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)proveedorBindingSource).EndInit();
             ResumeLayout(false);

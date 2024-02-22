@@ -41,5 +41,26 @@ namespace Froms_Candy
             pedido.Show();
             this.Hide();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Producto productos = new Producto();
+            productos.Show();
+            this.Hide();
+        }
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Proveedores proveedor = new Proveedores();
+            proveedor.Show();
+            this.Hide();
+        }
+
+        private void detallePedidoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Detalle_Pedido pedido = new Detalle_Pedido();
+            pedido.Show();
+            this.Hide();
+        }
     }
 }

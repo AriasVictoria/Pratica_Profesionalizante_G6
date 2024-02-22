@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Froms_Candy
 {
@@ -30,7 +31,7 @@ namespace Froms_Candy
         {
             Proveedor proveedor1 = new Proveedor();
 
-            proveedor1.cuit = int.Parse(textBox1.Text);
+            proveedor1.cuit = textBox1.Text;
             proveedor1.NombreProvedor = textBox2.Text;
             proveedor1.ApellidoProvedor = textBox3.Text;
 
@@ -45,6 +46,63 @@ namespace Froms_Candy
             textBox3.Clear();
 
             MessageBox.Show("agregado con exito");
+        }
+
+        private void Proveedores_Load(object sender, EventArgs e)
+        {
+            using (var context = new BaseDeDatos())
+            {
+                List<Proveedor> proveedores = context.Proveedor.ToList();
+                dataGridView1.DataSource = proveedores;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Proveedor seleccionado = (Proveedor)dataGridView1.CurrentRow.DataBoundItem;
+
+            principal.EliminarProveedor(seleccionado);
+
+            MessageBox.Show("Eliminado con exito ");
+
+            BindingSource aBind = new BindingSource();
+            aBind.EndEdit();
+            dataGridView1.DataSource = aBind;
+
+            using (var context = new BaseDeDatos())
+            {
+                List<Proveedor> proveedores = context.Proveedor.ToList();
+                dataGridView1.DataSource = proveedores;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Proveedor seleccionado = (Proveedor)dataGridView1.CurrentRow.DataBoundItem;
+
+            Proveedor proveedor1 = new Proveedor();
+
+            proveedor1.cuit = textBox1.Text;
+            proveedor1.NombreProvedor = textBox2.Text;
+            proveedor1.ApellidoProvedor = textBox3.Text;
+
+            principal.ActucalizarProveedor(proveedor1, seleccionado);
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+
+            MessageBox.Show("Modificado con exito ");
+
+            BindingSource aBind = new BindingSource();
+            aBind.EndEdit();
+            dataGridView1.DataSource = aBind;
+
+            using (var context = new BaseDeDatos())
+            {
+                List<Proveedor> proveedores = context.Proveedor.ToList();
+                dataGridView1.DataSource = proveedores;
+            }
         }
     }
 }
