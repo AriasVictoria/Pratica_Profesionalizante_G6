@@ -23,10 +23,10 @@
             {
                 var NuevoProducto = new Productos
                 {
+                    
                     NombreProducto = producto.NombreProducto,
                     stock = producto.stock,
                     tipo_producto = producto.tipo_producto,
-                    NombreProvedor = producto.NombreProvedor,
                 };
                 context.SaveChanges();
                 context.Productos.Add(NuevoProducto);
@@ -124,10 +124,8 @@
                 Productos producto1 = new Productos();
                 ModififcarProducto.NombreProducto = NuevoProducto.NombreProducto;
                 ModififcarProducto.stock = NuevoProducto.stock;
-                ModififcarProducto.NombreProvedor = NuevoProducto.NombreProvedor;
 
                 context.Productos.Update(NuevoProducto);
-                context.SaveChanges();
             }
         }
         public void ActucalizarProveedor(Proveedor NuevoProveedor, Proveedor seleccionado)
@@ -159,6 +157,8 @@
                 ModificarDueño.Contrasenia = NuevoDueño.Contrasenia;
 
                 context.Dueños.Update(NuevoDueño);
+                context.SaveChanges();
+
             }
         }
         public List<Dueño> MostrarUsuarios()

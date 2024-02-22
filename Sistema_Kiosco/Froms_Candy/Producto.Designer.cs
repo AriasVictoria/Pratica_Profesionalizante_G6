@@ -32,23 +32,20 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
             label5 = new Label();
             label6 = new Label();
             dataGridView1 = new DataGridView();
-            nombreProductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tipoproductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            stockDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nombreProvedorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productosBindingSource = new BindingSource(components);
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             button4 = new Button();
+            nombreProductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            tipoproductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            stockDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productosBindingSource).BeginInit();
             SuspendLayout();
@@ -80,15 +77,6 @@
             label3.TabIndex = 2;
             label3.Text = "Stock";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(11, 215);
-            label4.Name = "label4";
-            label4.Size = new Size(108, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Nombre Proveedor";
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(142, 82);
@@ -109,13 +97,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(142, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 7;
             // 
             // label5
             // 
@@ -142,37 +123,13 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreProductoDataGridViewTextBoxColumn, tipoproductoDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn, nombreProvedorDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreProductoDataGridViewTextBoxColumn, tipoproductoDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productosBindingSource;
             dataGridView1.Location = new Point(284, 100);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(459, 150);
             dataGridView1.TabIndex = 42;
-            // 
-            // nombreProductoDataGridViewTextBoxColumn
-            // 
-            nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
-            nombreProductoDataGridViewTextBoxColumn.HeaderText = "NombreProducto";
-            nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
-            // 
-            // tipoproductoDataGridViewTextBoxColumn
-            // 
-            tipoproductoDataGridViewTextBoxColumn.DataPropertyName = "tipo_producto";
-            tipoproductoDataGridViewTextBoxColumn.HeaderText = "tipo_producto";
-            tipoproductoDataGridViewTextBoxColumn.Name = "tipoproductoDataGridViewTextBoxColumn";
-            // 
-            // stockDataGridViewTextBoxColumn
-            // 
-            stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
-            stockDataGridViewTextBoxColumn.HeaderText = "stock";
-            stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            // 
-            // nombreProvedorDataGridViewTextBoxColumn
-            // 
-            nombreProvedorDataGridViewTextBoxColumn.DataPropertyName = "NombreProvedor";
-            nombreProvedorDataGridViewTextBoxColumn.HeaderText = "NombreProvedor";
-            nombreProvedorDataGridViewTextBoxColumn.Name = "nombreProvedorDataGridViewTextBoxColumn";
             // 
             // productosBindingSource
             // 
@@ -226,6 +183,24 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
+            nombreProductoDataGridViewTextBoxColumn.HeaderText = "NombreProducto";
+            nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            // 
+            // tipoproductoDataGridViewTextBoxColumn
+            // 
+            tipoproductoDataGridViewTextBoxColumn.DataPropertyName = "tipo_producto";
+            tipoproductoDataGridViewTextBoxColumn.HeaderText = "tipo_producto";
+            tipoproductoDataGridViewTextBoxColumn.Name = "tipoproductoDataGridViewTextBoxColumn";
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
+            stockDataGridViewTextBoxColumn.HeaderText = "stock";
+            stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            // 
             // Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -239,11 +214,9 @@
             Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(label6);
-            Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -261,22 +234,19 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
         private Label label5;
         private Label label6;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tipoproductoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nombreProvedorDataGridViewTextBoxColumn;
         private BindingSource productosBindingSource;
         private Button button3;
         private Button button2;
         private Button button1;
         private Button button4;
+        private DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tipoproductoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
     }
 }

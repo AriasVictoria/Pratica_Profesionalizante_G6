@@ -169,7 +169,7 @@
             // 
             button1.BackColor = Color.Violet;
             button1.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(496, 275);
+            button1.Location = new Point(377, 275);
             button1.Name = "button1";
             button1.Size = new Size(84, 30);
             button1.TabIndex = 48;
@@ -181,7 +181,7 @@
             // 
             button4.BackColor = Color.Violet;
             button4.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(353, 275);
+            button4.Location = new Point(516, 275);
             button4.Name = "button4";
             button4.Size = new Size(84, 30);
             button4.TabIndex = 47;

@@ -49,21 +49,21 @@ namespace Froms_Candy
         {
             Dueño seleccionado = (Dueño)dataGridView1.CurrentRow.DataBoundItem;
 
-            Dueño duenio = new Dueño();
+            Dueño dueño = new Dueño();
 
-            duenio.DNI = int.Parse(textBox1.Text);
-            duenio.NombreDuenio = textBox2.Text;
-            duenio.ApellidoDuenio = textBox3.Text;
-            duenio.Contrasenia = textBox4.Text;
+            dueño.DNI = int.Parse(textBox1.Text);
+            dueño.NombreDuenio = textBox2.Text;
+            dueño.ApellidoDuenio = textBox3.Text;
+            dueño.Contrasenia = textBox3.Text;
 
-            principal.ActualizarDueño(duenio, seleccionado);
+            principal.ActualizarDueño(dueño, seleccionado);
+
+            MessageBox.Show("Modificado con exito ");
 
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
-
-            MessageBox.Show("Modificado con exito ");
 
             BindingSource aBind = new BindingSource();
             aBind.EndEdit();

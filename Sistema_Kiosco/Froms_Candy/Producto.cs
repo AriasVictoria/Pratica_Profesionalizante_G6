@@ -30,20 +30,18 @@ namespace Froms_Candy
         {
             using (var context = new BaseDeDatos())
             {
-                Productos Productos = new Productos();
+                Productos productos = new Productos();
+
                 Proveedor proveedor = new Proveedor();
 
-                Productos.NombreProducto = textBox1.Text;
-                Productos.tipo_producto = textBox2.Text;
-                Productos.stock = int.Parse(textBox3.Text);
-                proveedor.NombreProvedor = textBox4.Text;
+                productos.NombreProducto = textBox1.Text;
+                productos.tipo_producto = textBox2.Text;
+                productos.stock = int.Parse(textBox3.Text);
 
-                principal.AltaProductos(Productos);
-                principal.AltaProveedor(proveedor);
-
+                principal.AltaProductos(productos);
 
                 BindingSource aBind = new BindingSource();
-                aBind.DataSource = Productos;
+                aBind.DataSource = productos;
                 dataGridView1.DataSource = aBind;
 
                 MessageBox.Show("agregado con exito");
@@ -51,15 +49,13 @@ namespace Froms_Candy
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
-                textBox4.Clear();
 
                 context.SaveChanges();
             }
 
-
         }
         private void button4_Click(object sender, EventArgs e)
-        { 
+        {
             Productos seleccionado = (Productos)dataGridView1.CurrentRow.DataBoundItem;
 
             principal.EliminarProducto(seleccionado);
@@ -75,7 +71,7 @@ namespace Froms_Candy
                 List<Productos> producto = context.Productos.ToList();
                 dataGridView1.DataSource = producto;
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,19 +79,16 @@ namespace Froms_Candy
             Productos seleccionado = (Productos)dataGridView1.CurrentRow.DataBoundItem;
 
             Productos productos = new Productos();
-            Proveedor proveedor = new Proveedor();
 
             productos.NombreProducto = textBox1.Text;
             productos.tipo_producto = textBox2.Text;
             productos.stock = int.Parse(textBox3.Text);
-            proveedor.NombreProvedor = textBox4.Text;
 
             principal.ActucalizarProducto(productos, seleccionado);
 
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            textBox4.Clear();
 
             MessageBox.Show("Modificado con exito ");
 

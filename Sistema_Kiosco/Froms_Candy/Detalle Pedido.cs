@@ -46,9 +46,6 @@ namespace Froms_Candy
 
                 principal.AltaDetallePedido(pedido);
 
-                DataGridView dataGridView1 = new DataGridView();
-                dataGridView1.DataSource = pedido;
-
                 BindingSource aBind = new BindingSource();
                 aBind.DataSource = pedido;
                 dataGridView1.DataSource = aBind;
@@ -61,6 +58,7 @@ namespace Froms_Candy
                 textBox5.Clear();
                 textBox6.Clear();
 
+                
                 context.SaveChanges();
             }
         }
@@ -116,18 +114,6 @@ namespace Froms_Candy
                 dataGridView1.DataSource = pedido1;
             }
 
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Obtiene la cantidad y el precio unitario
-                decimal cantidad = (decimal)row.Cells["Cantidad"].Value;
-                decimal precioUnitario = (decimal)row.Cells["PrecioUnitario"].Value;
-
-                // Calcula el monto
-                decimal Monto = cantidad * precioUnitario;
-
-                // Actualiza el valor del monto en la columna
-                row.Cells["Monto"].Value = Monto;
-            }
         }
 
         private void Detalle_Pedido_Load(object sender, EventArgs e)
