@@ -43,6 +43,7 @@
             button2 = new Button();
             button1 = new Button();
             button4 = new Button();
+            Id = new DataGridViewTextBoxColumn();
             nombreProductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tipoproductoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             stockDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -123,7 +124,7 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreProductoDataGridViewTextBoxColumn, tipoproductoDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, nombreProductoDataGridViewTextBoxColumn, tipoproductoDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productosBindingSource;
             dataGridView1.Location = new Point(284, 100);
             dataGridView1.Name = "dataGridView1";
@@ -163,7 +164,7 @@
             // 
             button1.BackColor = Color.Violet;
             button1.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(530, 296);
+            button1.Location = new Point(394, 296);
             button1.Name = "button1";
             button1.Size = new Size(84, 30);
             button1.TabIndex = 52;
@@ -175,13 +176,19 @@
             // 
             button4.BackColor = Color.Violet;
             button4.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(387, 296);
+            button4.Location = new Point(537, 296);
             button4.Name = "button4";
             button4.Size = new Size(84, 30);
             button4.TabIndex = 51;
             button4.Text = "BAJA";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
+            // 
+            // Id
+            // 
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
             // 
             // nombreProductoDataGridViewTextBoxColumn
             // 
@@ -245,6 +252,7 @@
         private Button button2;
         private Button button1;
         private Button button4;
+        private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tipoproductoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;

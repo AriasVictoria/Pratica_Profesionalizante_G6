@@ -24,7 +24,6 @@ namespace Froms_Candy.Login
 
             using (var context = new BaseDeDatos())
             {
-
                 string usuarioIngresado = textBox1.Text;
                 Dueño? usuarioEncontrado = context.Dueños.FirstOrDefault(c => c.NombreDuenio == usuarioIngresado);
                 if (usuarioEncontrado == null)

@@ -32,8 +32,6 @@ namespace Froms_Candy
             {
                 Productos productos = new Productos();
 
-                Proveedor proveedor = new Proveedor();
-
                 productos.NombreProducto = textBox1.Text;
                 productos.tipo_producto = textBox2.Text;
                 productos.stock = int.Parse(textBox3.Text);
@@ -50,7 +48,6 @@ namespace Froms_Candy
                 textBox2.Clear();
                 textBox3.Clear();
 
-                context.SaveChanges();
             }
 
         }
@@ -63,7 +60,6 @@ namespace Froms_Candy
             MessageBox.Show("Eliminado con exito ");
 
             BindingSource aBind = new BindingSource();
-            aBind.EndEdit();
             dataGridView1.DataSource = aBind;
 
             using (var context = new BaseDeDatos())
@@ -71,7 +67,6 @@ namespace Froms_Candy
                 List<Productos> producto = context.Productos.ToList();
                 dataGridView1.DataSource = producto;
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,8 +93,9 @@ namespace Froms_Candy
 
             using (var context = new BaseDeDatos())
             {
-                List<Proveedor> proveedores = context.Proveedor.ToList();
-                dataGridView1.DataSource = proveedores;
+                List<Productos> producto = context.Productos.ToList();
+
+                dataGridView1.DataSource = producto;
             }
         }
 

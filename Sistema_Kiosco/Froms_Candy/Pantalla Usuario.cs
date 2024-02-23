@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Froms_Candy
 {
@@ -47,6 +48,35 @@ namespace Froms_Candy
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Dueño Seleccionado = (Dueño)dataGridView1.CurrentRow.DataBoundItem;
+
+            Dueño dueño = new Dueño();
+
+            dueño.DNI = int.Parse(textBox1.Text);
+            dueño.NombreDuenio = textBox2.Text;
+            dueño.ApellidoDuenio = textBox3.Text;
+            dueño.Contrasenia = textBox4.Text;
+
+            principal.ActualizarDueño(dueño, Seleccionado);
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+
+            MessageBox.Show("Modificado con exito ");
+
+            BindingSource aBind = new BindingSource();
+            aBind.EndEdit();
+            dataGridView1.DataSource = dueño;
+
+            using (var context = new BaseDeDatos())
+            {
+                List<Dueño> dueño1 = context.Dueños.ToList();
+                dataGridView1.DataSource = dueño;
+            }
+
+            /*
             Dueño seleccionado = (Dueño)dataGridView1.CurrentRow.DataBoundItem;
 
             Dueño dueño = new Dueño();
@@ -74,6 +104,7 @@ namespace Froms_Candy
                 List<Dueño> dueño1 = context.Dueños.ToList();
                 dataGridView1.DataSource = dueño1;
             }
+            */
         }
 
         private void Pantalla_Usuario_Load(object sender, EventArgs e)
